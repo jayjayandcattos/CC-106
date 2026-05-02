@@ -1,6 +1,5 @@
 import os
 
-# We will generate a complete Blockly XML string with all 9 buttons and logic.
 xml_content = """<xml xmlns="http://www.w3.org/1999/xhtml">
   <block type="global_declaration" id="global_turn" x="-1000" y="-800">
     <field name="NAME">turn</field>
@@ -14,32 +13,38 @@ xml_content = """<xml xmlns="http://www.w3.org/1999/xhtml">
     <field name="NAME">current_answer</field>
     <value name="VALUE"><block type="text" id="text_ans"><field name="TEXT"></field></block></value>
   </block>
+  
   <block type="global_declaration" id="global_q" x="-1000" y="-600">
     <field name="NAME">questions</field>
     <value name="VALUE">
       <block type="lists_create_with" id="list_q">
-        <mutation items="3"></mutation>
-        <value name="ADD0">
-          <block type="lists_create_with" id="q1">
+        <mutation items="9"></mutation>
+"""
+
+questions = [
+    ("Geo Easy: Capital of France?", "paris"),
+    ("Geo Med: Capital of Australia?", "canberra"),
+    ("Geo Hard: Capital of Burkina Faso?", "ouagadougou"),
+    ("Math Easy: What is 5 + 7?", "12"),
+    ("Math Med: What is 12 * 12?", "144"),
+    ("Math Hard: Square root of 225?", "15"),
+    ("Trivia Easy: Color of a school bus?", "yellow"),
+    ("Trivia Med: How many continents are there?", "7"),
+    ("Trivia Hard: A network security system? (Hint: firewall)", "firewall")
+]
+
+for idx, (q, a) in enumerate(questions):
+    xml_content += f"""
+        <value name="ADD{idx}">
+          <block type="lists_create_with" id="q_{idx}">
             <mutation items="2"></mutation>
-            <value name="ADD0"><block type="text" id="q1_q"><field name="TEXT">What is the capital of France?</field></block></value>
-            <value name="ADD1"><block type="text" id="q1_a"><field name="TEXT">paris</field></block></value>
+            <value name="ADD0"><block type="text" id="q_q_{idx}"><field name="TEXT">{q}</field></block></value>
+            <value name="ADD1"><block type="text" id="q_a_{idx}"><field name="TEXT">{a}</field></block></value>
           </block>
         </value>
-        <value name="ADD1">
-          <block type="lists_create_with" id="q2">
-            <mutation items="2"></mutation>
-            <value name="ADD0"><block type="text" id="q2_q"><field name="TEXT">What is 5 + 7?</field></block></value>
-            <value name="ADD1"><block type="text" id="q2_a"><field name="TEXT">12</field></block></value>
-          </block>
-        </value>
-        <value name="ADD2">
-          <block type="lists_create_with" id="q3">
-            <mutation items="2"></mutation>
-            <value name="ADD0"><block type="text" id="q3_q"><field name="TEXT">What is a firewall? (Hint: security)</field></block></value>
-            <value name="ADD1"><block type="text" id="q3_a"><field name="TEXT">security</field></block></value>
-          </block>
-        </value>
+"""
+
+xml_content += """
       </block>
     </value>
   </block>
@@ -100,7 +105,7 @@ xml_content = """<xml xmlns="http://www.w3.org/1999/xhtml">
     </statement>
   </block>
 
-  <!-- We will map Button clicks -->
+  <!-- Button Clicks -->
 """
 
 for i in range(1, 10):
@@ -125,7 +130,10 @@ for i in range(1, 10):
         </value>
         <statement name="DO0">
           <block type="procedures_callnoreturn" id="call_handle{i}">
-            <mutation name="HandleMove"></mutation>
+            <!-- THE CRITICAL FIX: Add arg name="btnId" -->
+            <mutation name="HandleMove">
+               <arg name="btnId"></arg>
+            </mutation>
             <value name="ARG0"><block type="text" id="arg_btn{i}"><field name="TEXT">Btn{i}</field></block></value>
           </block>
         </statement>
@@ -134,8 +142,157 @@ for i in range(1, 10):
   </block>
 """
 
-# Next, the Notifier handler. It's simplified: If correct, we update the button using a huge IF/ELSE chain or dynamic component. 
-# A big IF/ELSE chain is safer for manual XML generation.
+# CheckWin logic using nested IFs for 8 combos.
+xml_content += """
+  <block type="procedures_defnoreturn" id="proc_checkwin" x="1000" y="-400">
+    <field name="NAME">CheckWin</field>
+    <statement name="STACK">
+"""
+
+win_combos = [
+  (1,2,3), (4,5,6), (7,8,9),
+  (1,4,7), (2,5,8), (3,6,9),
+  (1,5,9), (3,5,7)
+]
+
+# We will generate a sequence of ifs. If won, alert and call reset.
+for combo in win_combos:
+    c_id = "".join(map(str, combo))
+    xml_content += f"""
+      <block type="controls_if" id="win_{c_id}">
+        <value name="IF0">
+          <!-- A != _ -->
+          <block type="logic_compare">
+            <field name="OP">NEQ</field>
+            <value name="A">
+              <block type="component_set_get">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn{combo[0]}"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn{combo[0]}</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B"><block type="text"><field name="TEXT">_</field></block></value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="controls_if">
+            <value name="IF0">
+              <!-- A == B -->
+              <block type="logic_compare">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="component_set_get">
+                    <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn{combo[0]}"></mutation>
+                    <field name="COMPONENT_SELECTOR">Btn{combo[0]}</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="component_set_get">
+                    <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn{combo[1]}"></mutation>
+                    <field name="COMPONENT_SELECTOR">Btn{combo[1]}</field>
+                    <field name="PROP">Text</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if">
+                <value name="IF0">
+                  <!-- B == C -->
+                  <block type="logic_compare">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="component_set_get">
+                        <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn{combo[1]}"></mutation>
+                        <field name="COMPONENT_SELECTOR">Btn{combo[1]}</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="component_set_get">
+                        <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn{combo[2]}"></mutation>
+                        <field name="COMPONENT_SELECTOR">Btn{combo[2]}</field>
+                        <field name="PROP">Text</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="component_method">
+                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Notifier1</field>
+                    <value name="ARG0">
+                      <block type="text_join">
+                        <mutation items="2"></mutation>
+                        <value name="ADD0"><block type="text"><field name="TEXT">Winner: </field></block></value>
+                        <value name="ADD1">
+                          <block type="component_set_get">
+                            <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn{combo[0]}"></mutation>
+                            <field name="COMPONENT_SELECTOR">Btn{combo[0]}</field>
+                            <field name="PROP">Text</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="procedures_callnoreturn">
+                        <mutation name="ResetGame"></mutation>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </statement>
+        <next>
+"""
+
+# Close all 'next' blocks
+xml_content += "  " + "</next></block>" * 8
+
+xml_content += """
+    </statement>
+  </block>
+"""
+
+# Reset Game Procedure
+xml_content += """
+  <block type="procedures_defnoreturn" id="proc_reset" x="2000" y="-400">
+    <field name="NAME">ResetGame</field>
+    <statement name="STACK">
+"""
+for i in range(1, 10):
+    xml_content += f"""
+      <block type="component_set_get">
+        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn{i}"></mutation>
+        <field name="COMPONENT_SELECTOR">Btn{i}</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE"><block type="text"><field name="TEXT">_</field></block></value>
+        <next>
+"""
+xml_content += """
+        <block type="lexical_variable_set">
+          <field name="VAR">global turn</field>
+          <value name="VALUE"><block type="text"><field name="TEXT">X</field></block></value>
+          <next>
+            <block type="component_set_get">
+              <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="LblTurn"></mutation>
+              <field name="COMPONENT_SELECTOR">LblTurn</field>
+              <field name="PROP">Text</field>
+              <value name="VALUE"><block type="text"><field name="TEXT">X Turn</field></block></value>
+            </block>
+          </next>
+        </block>
+"""
+xml_content += "</next></block>" * 9
+xml_content += """
+    </statement>
+  </block>
+"""
+
+# Notifier AfterTextInput handler
 xml_content += """
   <block type="component_event" id="notifier_after" x="-1000" y="200">
     <mutation component_type="Notifier" is_generic="false" instance_name="Notifier1" event_name="AfterTextInput"></mutation>
@@ -161,7 +318,7 @@ xml_content += """
           </block>
         </value>
         <statement name="DO0">
-          <!-- Update the clicked button -->
+          <!-- CORRECT ANSWER: Update the clicked button -->
           <block type="controls_if" id="update_chain">
             <mutation elseif="8"></mutation>
 """
@@ -190,8 +347,22 @@ for i in range(1, 10):
 xml_content += """
           </block>
         </statement>
+        <statement name="ELSE">
+          <!-- INCORRECT ANSWER: Alert player -->
+          <block type="component_method">
+            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+            <field name="COMPONENT_SELECTOR">Notifier1</field>
+            <value name="ARG0">
+              <block type="text_join">
+                <mutation items="2"></mutation>
+                <value name="ADD0"><block type="text"><field name="TEXT">Incorrect! Turn passed to the opponent.</field></block></value>
+                <value name="ADD1"><block type="text"><field name="TEXT"></field></block></value>
+              </block>
+            </value>
+          </block>
+        </statement>
         <next>
-          <!-- Swap Turn (Happens whether correct or wrong to skip turn) -->
+          <!-- Swap Turn & Check Win (Happens whether correct or wrong to skip turn) -->
           <block type="controls_if" id="swap_turn">
             <mutation else="1"></mutation>
             <value name="IF0">
@@ -218,7 +389,18 @@ xml_content += """
                 <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="LblTurn"></mutation>
                 <field name="COMPONENT_SELECTOR">LblTurn</field>
                 <field name="PROP">Text</field>
-                <value name="VALUE"><block type="lexical_variable_get" id="get_turn_swap2"><field name="VAR">global turn</field></block></value>
+                <value name="VALUE">
+                   <block type="text_join">
+                      <mutation items="2"></mutation>
+                      <value name="ADD0"><block type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                      <value name="ADD1"><block type="text"><field name="TEXT"> Turn</field></block></value>
+                   </block>
+                </value>
+                <next>
+                  <block type="procedures_callnoreturn">
+                    <mutation name="CheckWin"></mutation>
+                  </block>
+                </next>
               </block>
             </next>
           </block>
@@ -231,28 +413,9 @@ xml_content += """
     <mutation component_type="Button" is_generic="false" instance_name="BtnReset" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">BtnReset</field>
     <statement name="DO">
-"""
-
-# Reset all buttons
-for i in range(1, 10):
-    xml_content += f"""
-      <block type="component_set_get" id="reset_btn{i}">
-        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn{i}"></mutation>
-        <field name="COMPONENT_SELECTOR">Btn{i}</field>
-        <field name="PROP">Text</field>
-        <value name="VALUE"><block type="text" id="empty_reset{i}"><field name="TEXT">_</field></block></value>
-        <next>
-"""
-xml_content += """
-        <block type="lexical_variable_set" id="reset_turn">
-          <field name="VAR">global turn</field>
-          <value name="VALUE"><block type="text" id="text_reset_x"><field name="TEXT">X</field></block></value>
-        </block>
-"""
-for i in range(1, 10):
-    xml_content += "</next></block>"
-
-xml_content += """
+      <block type="procedures_callnoreturn">
+        <mutation name="ResetGame"></mutation>
+      </block>
     </statement>
   </block>
 
@@ -260,5 +423,5 @@ xml_content += """
 </xml>
 """
 
-with open("c:/Users/Justin/Downloads/LegitNaTo/Extracted/src/appinventor/ai_gordonlu0749/test/Screen1.bky", "w") as f:
+with open(r"c:\Users\Justin\Downloads\LegitNaTo\Extracted\src\appinventor\ai_gordonlu0749\test\Screen1.bky", "w") as f:
     f.write(xml_content)
