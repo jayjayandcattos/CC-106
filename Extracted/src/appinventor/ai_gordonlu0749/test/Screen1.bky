@@ -1,1 +1,642 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"><block type="component_event" id="#dxhe}?S1(Xh#Q]NJ08x" x="-1034" y="-212"><mutation component_type="Button" is_generic="false" instance_name="Button1" event_name="Click"></mutation><field name="COMPONENT_SELECTOR">Button1</field><statement name="DO"><block type="component_method" id="1Rxj`F+CJ`MUlxvYs?}m"><mutation component_type="TicTacToe" method_name="ResetGame" is_generic="false" instance_name="TicTacToe1"></mutation><field name="COMPONENT_SELECTOR">TicTacToe1</field></block></statement></block><block type="component_event" id="c33x$%FiYR,eK#wdtT_I" x="-735" y="-204"><mutation component_type="TicTacToe" is_generic="false" instance_name="TicTacToe1" event_name="OnXTurn"></mutation><field name="COMPONENT_SELECTOR">TicTacToe1</field><statement name="DO"><block type="component_set_get" id="m+P*;`(KglE*g(rRX%O*"><mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label1"></mutation><field name="COMPONENT_SELECTOR">Label1</field><field name="PROP">Text</field><value name="VALUE"><block type="text" id="~1LT:eO`nmWc~e6PK)^E"><field name="TEXT">X Turn</field></block></value></block></statement></block><block type="component_event" id="K@a*B8x$Fk!8jdt;F[P{" x="-318" y="-139"><mutation component_type="Form" is_generic="false" instance_name="Screen1" event_name="Initialize"></mutation><field name="COMPONENT_SELECTOR">Screen1</field><statement name="DO"><block type="component_method" id="dz~mFz^{)x)gxCP]Usgc"><mutation component_type="TicTacToe" method_name="InitializeView" is_generic="false" instance_name="TicTacToe1"></mutation><field name="COMPONENT_SELECTOR">TicTacToe1</field><value name="ARG0"><block type="component_component_block" id="xFFnRsjP70-O-#aL/t2O"><mutation component_type="VerticalArrangement" instance_name="Vertical_Arrangement1"></mutation><field name="COMPONENT_SELECTOR">Vertical_Arrangement1</field></block></value></block></statement></block><block type="component_event" id="I%u*p-DjWH=7EZn5w*dE" x="-821" y="-82"><mutation component_type="TicTacToe" is_generic="false" instance_name="TicTacToe1" event_name="OnOTurn"></mutation><field name="COMPONENT_SELECTOR">TicTacToe1</field><statement name="DO"><block type="component_set_get" id="R_VEZ@hB`#{Fe)msh#}4"><mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="Label1"></mutation><field name="COMPONENT_SELECTOR">Label1</field><field name="PROP">Text</field><value name="VALUE"><block type="text" id="OJ]sOx~;)ZlVE^|ALK/m"><field name="TEXT">O Turn</field></block></value></block></statement></block><block type="component_event" id="VvfH~lqly)[0b6%{16^(" x="-576" y="-8"><mutation component_type="TicTacToe" is_generic="false" instance_name="TicTacToe1" event_name="OnGameDraw"></mutation><field name="COMPONENT_SELECTOR">TicTacToe1</field><statement name="DO"><block type="component_method" id="^/hAP9o5j)=9WmQ8UODW"><mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation><field name="COMPONENT_SELECTOR">Notifier1</field><value name="ARG0"><block type="text" id="vSLXm|VIEgC}yT*J6{qK"><field name="TEXT">game draw</field></block></value></block></statement></block><block type="component_event" id="2u.?9UBM0/9tu64om4o/" x="-883" y="36"><mutation component_type="TicTacToe" is_generic="false" instance_name="TicTacToe1" event_name="OnWinnerFound"></mutation><field name="COMPONENT_SELECTOR">TicTacToe1</field><statement name="DO"><block type="controls_if" id="b2;YQ+j7?G2ka74gzb$Q"><mutation else="1"></mutation><value name="IF0"><block type="logic_compare" id="(QqQV]3iWi+@vL^GN~q@"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get" id="8H:FUWCbD.:y+00_|kMq"><mutation><eventparam name="winner"></eventparam></mutation><field name="VAR">winner</field></block></value><value name="B"><block type="math_number" id="|!3RwH9:2*^r_-V28@j@"><field name="NUM">0</field></block></value></block></value><statement name="DO0"><block type="component_method" id="zsp.u`:qRp0#Y78J+hHR"><mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation><field name="COMPONENT_SELECTOR">Notifier1</field><value name="ARG0"><block type="text" id="C8Ex-c%Pl=7UG~/{G|P1"><field name="TEXT">The winner is: X</field></block></value></block></statement><statement name="ELSE"><block type="component_method" id="(DHVM-zW}JM$@1TnrS{@"><mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation><field name="COMPONENT_SELECTOR">Notifier1</field><value name="ARG0"><block type="text" id="|q-R}*Wob_{RY5/2rYf["><field name="TEXT">The winner is: 0</field></block></value></block></statement></block></statement></block><yacodeblocks ya-version="213" language-version="34"></yacodeblocks></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="global_declaration" id="global_turn" x="-1000" y="-800">
+    <field name="NAME">turn</field>
+    <value name="VALUE"><block type="text" id="text_turn"><field name="TEXT">X</field></block></value>
+  </block>
+  <block type="global_declaration" id="global_pending" x="-1000" y="-750">
+    <field name="NAME">pending_move</field>
+    <value name="VALUE"><block type="text" id="text_pending"><field name="TEXT"></field></block></value>
+  </block>
+  <block type="global_declaration" id="global_ans" x="-1000" y="-700">
+    <field name="NAME">current_answer</field>
+    <value name="VALUE"><block type="text" id="text_ans"><field name="TEXT"></field></block></value>
+  </block>
+  <block type="global_declaration" id="global_q" x="-1000" y="-600">
+    <field name="NAME">questions</field>
+    <value name="VALUE">
+      <block type="lists_create_with" id="list_q">
+        <mutation items="3"></mutation>
+        <value name="ADD0">
+          <block type="lists_create_with" id="q1">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block type="text" id="q1_q"><field name="TEXT">What is the capital of France?</field></block></value>
+            <value name="ADD1"><block type="text" id="q1_a"><field name="TEXT">paris</field></block></value>
+          </block>
+        </value>
+        <value name="ADD1">
+          <block type="lists_create_with" id="q2">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block type="text" id="q2_q"><field name="TEXT">What is 5 + 7?</field></block></value>
+            <value name="ADD1"><block type="text" id="q2_a"><field name="TEXT">12</field></block></value>
+          </block>
+        </value>
+        <value name="ADD2">
+          <block type="lists_create_with" id="q3">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block type="text" id="q3_q"><field name="TEXT">What is a firewall? (Hint: security)</field></block></value>
+            <value name="ADD1"><block type="text" id="q3_a"><field name="TEXT">security</field></block></value>
+          </block>
+        </value>
+      </block>
+    </value>
+  </block>
+
+  <block type="procedures_defnoreturn" id="proc_handle" x="-1000" y="-400">
+    <mutation><arg name="btnId"></arg></mutation>
+    <field name="NAME">HandleMove</field>
+    <statement name="STACK">
+      <block type="lexical_variable_set" id="set_pending">
+        <field name="VAR">global pending_move</field>
+        <value name="VALUE"><block type="lexical_variable_get" id="get_btnId"><field name="VAR">btnId</field></block></value>
+        <next>
+          <block type="procedures_callnoreturn" id="call_ask">
+            <mutation name="AskQuestion"></mutation>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+
+  <block type="procedures_defnoreturn" id="proc_ask" x="-1000" y="-200">
+    <field name="NAME">AskQuestion</field>
+    <statement name="STACK">
+      <block type="local_declaration_statement" id="local_qpair">
+        <mutation><localname name="q_pair"></localname></mutation>
+        <field name="VAR0">q_pair</field>
+        <value name="DECL0">
+          <block type="lists_pick_random_item" id="pick_random">
+            <value name="LIST"><block type="lexical_variable_get" id="get_global_q"><field name="VAR">global questions</field></block></value>
+          </block>
+        </value>
+        <statement name="STACK">
+          <block type="lexical_variable_set" id="set_ans">
+            <field name="VAR">global current_answer</field>
+            <value name="VALUE">
+              <block type="lists_select_item" id="select_a">
+                <value name="LIST"><block type="lexical_variable_get" id="get_qpair1"><field name="VAR">q_pair</field></block></value>
+                <value name="NUM"><block type="math_number" id="num_2"><field name="NUM">2</field></block></value>
+              </block>
+            </value>
+            <next>
+              <block type="component_method" id="call_notifier">
+                <mutation component_type="Notifier" method_name="ShowTextDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                <field name="COMPONENT_SELECTOR">Notifier1</field>
+                <value name="ARG0">
+                  <block type="lists_select_item" id="select_q">
+                    <value name="LIST"><block type="lexical_variable_get" id="get_qpair2"><field name="VAR">q_pair</field></block></value>
+                    <value name="NUM"><block type="math_number" id="num_1"><field name="NUM">1</field></block></value>
+                  </block>
+                </value>
+                <value name="ARG1"><block type="text" id="title_kg"><field name="TEXT">Knowledge Gate</field></block></value>
+                <value name="ARG2"><block type="logic_boolean" id="bool_f"><field name="BOOL">FALSE</field></block></value>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+
+  <!-- We will map Button clicks -->
+
+  <block type="component_event" id="btn1_click" x="-500" y="-700">
+    <mutation component_type="Button" is_generic="false" instance_name="Btn1" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Btn1</field>
+    <statement name="DO">
+      <block type="controls_if" id="if_btn1">
+        <value name="IF0">
+          <block type="logic_compare" id="cmp_btn1">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="get_btn1">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn1</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B"><block type="text" id="empty_btn1"><field name="TEXT">_</field></block></value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="call_handle1">
+            <mutation name="HandleMove"></mutation>
+            <value name="ARG0"><block type="text" id="arg_btn1"><field name="TEXT">Btn1</field></block></value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="btn2_click" x="-500" y="-600">
+    <mutation component_type="Button" is_generic="false" instance_name="Btn2" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Btn2</field>
+    <statement name="DO">
+      <block type="controls_if" id="if_btn2">
+        <value name="IF0">
+          <block type="logic_compare" id="cmp_btn2">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="get_btn2">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn2"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn2</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B"><block type="text" id="empty_btn2"><field name="TEXT">_</field></block></value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="call_handle2">
+            <mutation name="HandleMove"></mutation>
+            <value name="ARG0"><block type="text" id="arg_btn2"><field name="TEXT">Btn2</field></block></value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="btn3_click" x="-500" y="-500">
+    <mutation component_type="Button" is_generic="false" instance_name="Btn3" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Btn3</field>
+    <statement name="DO">
+      <block type="controls_if" id="if_btn3">
+        <value name="IF0">
+          <block type="logic_compare" id="cmp_btn3">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="get_btn3">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn3</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B"><block type="text" id="empty_btn3"><field name="TEXT">_</field></block></value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="call_handle3">
+            <mutation name="HandleMove"></mutation>
+            <value name="ARG0"><block type="text" id="arg_btn3"><field name="TEXT">Btn3</field></block></value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="btn4_click" x="-500" y="-400">
+    <mutation component_type="Button" is_generic="false" instance_name="Btn4" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Btn4</field>
+    <statement name="DO">
+      <block type="controls_if" id="if_btn4">
+        <value name="IF0">
+          <block type="logic_compare" id="cmp_btn4">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="get_btn4">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn4"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn4</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B"><block type="text" id="empty_btn4"><field name="TEXT">_</field></block></value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="call_handle4">
+            <mutation name="HandleMove"></mutation>
+            <value name="ARG0"><block type="text" id="arg_btn4"><field name="TEXT">Btn4</field></block></value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="btn5_click" x="-500" y="-300">
+    <mutation component_type="Button" is_generic="false" instance_name="Btn5" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Btn5</field>
+    <statement name="DO">
+      <block type="controls_if" id="if_btn5">
+        <value name="IF0">
+          <block type="logic_compare" id="cmp_btn5">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="get_btn5">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn5</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B"><block type="text" id="empty_btn5"><field name="TEXT">_</field></block></value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="call_handle5">
+            <mutation name="HandleMove"></mutation>
+            <value name="ARG0"><block type="text" id="arg_btn5"><field name="TEXT">Btn5</field></block></value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="btn6_click" x="-500" y="-200">
+    <mutation component_type="Button" is_generic="false" instance_name="Btn6" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Btn6</field>
+    <statement name="DO">
+      <block type="controls_if" id="if_btn6">
+        <value name="IF0">
+          <block type="logic_compare" id="cmp_btn6">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="get_btn6">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn6"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn6</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B"><block type="text" id="empty_btn6"><field name="TEXT">_</field></block></value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="call_handle6">
+            <mutation name="HandleMove"></mutation>
+            <value name="ARG0"><block type="text" id="arg_btn6"><field name="TEXT">Btn6</field></block></value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="btn7_click" x="-500" y="-100">
+    <mutation component_type="Button" is_generic="false" instance_name="Btn7" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Btn7</field>
+    <statement name="DO">
+      <block type="controls_if" id="if_btn7">
+        <value name="IF0">
+          <block type="logic_compare" id="cmp_btn7">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="get_btn7">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn7"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn7</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B"><block type="text" id="empty_btn7"><field name="TEXT">_</field></block></value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="call_handle7">
+            <mutation name="HandleMove"></mutation>
+            <value name="ARG0"><block type="text" id="arg_btn7"><field name="TEXT">Btn7</field></block></value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="btn8_click" x="-500" y="0">
+    <mutation component_type="Button" is_generic="false" instance_name="Btn8" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Btn8</field>
+    <statement name="DO">
+      <block type="controls_if" id="if_btn8">
+        <value name="IF0">
+          <block type="logic_compare" id="cmp_btn8">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="get_btn8">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn8"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn8</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B"><block type="text" id="empty_btn8"><field name="TEXT">_</field></block></value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="call_handle8">
+            <mutation name="HandleMove"></mutation>
+            <value name="ARG0"><block type="text" id="arg_btn8"><field name="TEXT">Btn8</field></block></value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="btn9_click" x="-500" y="100">
+    <mutation component_type="Button" is_generic="false" instance_name="Btn9" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">Btn9</field>
+    <statement name="DO">
+      <block type="controls_if" id="if_btn9">
+        <value name="IF0">
+          <block type="logic_compare" id="cmp_btn9">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="component_set_get" id="get_btn9">
+                <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn9"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn9</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="B"><block type="text" id="empty_btn9"><field name="TEXT">_</field></block></value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="procedures_callnoreturn" id="call_handle9">
+            <mutation name="HandleMove"></mutation>
+            <value name="ARG0"><block type="text" id="arg_btn9"><field name="TEXT">Btn9</field></block></value>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="notifier_after" x="-1000" y="200">
+    <mutation component_type="Notifier" is_generic="false" instance_name="Notifier1" event_name="AfterTextInput"></mutation>
+    <field name="COMPONENT_SELECTOR">Notifier1</field>
+    <statement name="DO">
+      <block type="controls_if" id="check_ans">
+        <mutation else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="cmp_ans">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="text_changeCase" id="lower_res">
+                <field name="OP">DOWNCASE</field>
+                <value name="STRING"><block type="lexical_variable_get" id="get_res"><mutation><eventparam name="response"></eventparam></mutation><field name="VAR">response</field></block></value>
+              </block>
+            </value>
+            <value name="B">
+              <block type="text_changeCase" id="lower_cur">
+                <field name="OP">DOWNCASE</field>
+                <value name="STRING"><block type="lexical_variable_get" id="get_cur"><field name="VAR">global current_answer</field></block></value>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <!-- Update the clicked button -->
+          <block type="controls_if" id="update_chain">
+            <mutation elseif="8"></mutation>
+
+            <value name="IF0">
+              <block type="logic_compare" id="cmp_update1">
+                <field name="OP">EQ</field>
+                <value name="A"><block type="lexical_variable_get" id="get_pending1"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block type="text" id="text_pending1"><field name="TEXT">Btn1</field></block></value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="component_set_get" id="set_btn1">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn1</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE"><block type="lexical_variable_get" id="get_turn1"><field name="VAR">global turn</field></block></value>
+              </block>
+            </statement>
+
+            <value name="IF1">
+              <block type="logic_compare" id="cmp_update2">
+                <field name="OP">EQ</field>
+                <value name="A"><block type="lexical_variable_get" id="get_pending2"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block type="text" id="text_pending2"><field name="TEXT">Btn2</field></block></value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="component_set_get" id="set_btn2">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn2"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn2</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE"><block type="lexical_variable_get" id="get_turn2"><field name="VAR">global turn</field></block></value>
+              </block>
+            </statement>
+
+            <value name="IF2">
+              <block type="logic_compare" id="cmp_update3">
+                <field name="OP">EQ</field>
+                <value name="A"><block type="lexical_variable_get" id="get_pending3"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block type="text" id="text_pending3"><field name="TEXT">Btn3</field></block></value>
+              </block>
+            </value>
+            <statement name="DO2">
+              <block type="component_set_get" id="set_btn3">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn3</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE"><block type="lexical_variable_get" id="get_turn3"><field name="VAR">global turn</field></block></value>
+              </block>
+            </statement>
+
+            <value name="IF3">
+              <block type="logic_compare" id="cmp_update4">
+                <field name="OP">EQ</field>
+                <value name="A"><block type="lexical_variable_get" id="get_pending4"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block type="text" id="text_pending4"><field name="TEXT">Btn4</field></block></value>
+              </block>
+            </value>
+            <statement name="DO3">
+              <block type="component_set_get" id="set_btn4">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn4"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn4</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE"><block type="lexical_variable_get" id="get_turn4"><field name="VAR">global turn</field></block></value>
+              </block>
+            </statement>
+
+            <value name="IF4">
+              <block type="logic_compare" id="cmp_update5">
+                <field name="OP">EQ</field>
+                <value name="A"><block type="lexical_variable_get" id="get_pending5"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block type="text" id="text_pending5"><field name="TEXT">Btn5</field></block></value>
+              </block>
+            </value>
+            <statement name="DO4">
+              <block type="component_set_get" id="set_btn5">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn5</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE"><block type="lexical_variable_get" id="get_turn5"><field name="VAR">global turn</field></block></value>
+              </block>
+            </statement>
+
+            <value name="IF5">
+              <block type="logic_compare" id="cmp_update6">
+                <field name="OP">EQ</field>
+                <value name="A"><block type="lexical_variable_get" id="get_pending6"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block type="text" id="text_pending6"><field name="TEXT">Btn6</field></block></value>
+              </block>
+            </value>
+            <statement name="DO5">
+              <block type="component_set_get" id="set_btn6">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn6"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn6</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE"><block type="lexical_variable_get" id="get_turn6"><field name="VAR">global turn</field></block></value>
+              </block>
+            </statement>
+
+            <value name="IF6">
+              <block type="logic_compare" id="cmp_update7">
+                <field name="OP">EQ</field>
+                <value name="A"><block type="lexical_variable_get" id="get_pending7"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block type="text" id="text_pending7"><field name="TEXT">Btn7</field></block></value>
+              </block>
+            </value>
+            <statement name="DO6">
+              <block type="component_set_get" id="set_btn7">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn7"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn7</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE"><block type="lexical_variable_get" id="get_turn7"><field name="VAR">global turn</field></block></value>
+              </block>
+            </statement>
+
+            <value name="IF7">
+              <block type="logic_compare" id="cmp_update8">
+                <field name="OP">EQ</field>
+                <value name="A"><block type="lexical_variable_get" id="get_pending8"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block type="text" id="text_pending8"><field name="TEXT">Btn8</field></block></value>
+              </block>
+            </value>
+            <statement name="DO7">
+              <block type="component_set_get" id="set_btn8">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn8"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn8</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE"><block type="lexical_variable_get" id="get_turn8"><field name="VAR">global turn</field></block></value>
+              </block>
+            </statement>
+
+            <value name="IF8">
+              <block type="logic_compare" id="cmp_update9">
+                <field name="OP">EQ</field>
+                <value name="A"><block type="lexical_variable_get" id="get_pending9"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block type="text" id="text_pending9"><field name="TEXT">Btn9</field></block></value>
+              </block>
+            </value>
+            <statement name="DO8">
+              <block type="component_set_get" id="set_btn9">
+                <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn9"></mutation>
+                <field name="COMPONENT_SELECTOR">Btn9</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE"><block type="lexical_variable_get" id="get_turn9"><field name="VAR">global turn</field></block></value>
+              </block>
+            </statement>
+
+          </block>
+        </statement>
+        <next>
+          <!-- Swap Turn (Happens whether correct or wrong to skip turn) -->
+          <block type="controls_if" id="swap_turn">
+            <mutation else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="cmp_turn">
+                <field name="OP">EQ</field>
+                <value name="A"><block type="lexical_variable_get" id="get_turn_swap1"><field name="VAR">global turn</field></block></value>
+                <value name="B"><block type="text" id="text_x"><field name="TEXT">X</field></block></value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="lexical_variable_set" id="set_o">
+                <field name="VAR">global turn</field>
+                <value name="VALUE"><block type="text" id="text_o2"><field name="TEXT">O</field></block></value>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="lexical_variable_set" id="set_x">
+                <field name="VAR">global turn</field>
+                <value name="VALUE"><block type="text" id="text_x2"><field name="TEXT">X</field></block></value>
+              </block>
+            </statement>
+            <next>
+              <block type="component_set_get" id="set_lbl">
+                <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="LblTurn"></mutation>
+                <field name="COMPONENT_SELECTOR">LblTurn</field>
+                <field name="PROP">Text</field>
+                <value name="VALUE"><block type="lexical_variable_get" id="get_turn_swap2"><field name="VAR">global turn</field></block></value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="reset_click" x="-1000" y="1000">
+    <mutation component_type="Button" is_generic="false" instance_name="BtnReset" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">BtnReset</field>
+    <statement name="DO">
+
+      <block type="component_set_get" id="reset_btn1">
+        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
+        <field name="COMPONENT_SELECTOR">Btn1</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE"><block type="text" id="empty_reset1"><field name="TEXT">_</field></block></value>
+        <next>
+
+      <block type="component_set_get" id="reset_btn2">
+        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn2"></mutation>
+        <field name="COMPONENT_SELECTOR">Btn2</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE"><block type="text" id="empty_reset2"><field name="TEXT">_</field></block></value>
+        <next>
+
+      <block type="component_set_get" id="reset_btn3">
+        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
+        <field name="COMPONENT_SELECTOR">Btn3</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE"><block type="text" id="empty_reset3"><field name="TEXT">_</field></block></value>
+        <next>
+
+      <block type="component_set_get" id="reset_btn4">
+        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn4"></mutation>
+        <field name="COMPONENT_SELECTOR">Btn4</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE"><block type="text" id="empty_reset4"><field name="TEXT">_</field></block></value>
+        <next>
+
+      <block type="component_set_get" id="reset_btn5">
+        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
+        <field name="COMPONENT_SELECTOR">Btn5</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE"><block type="text" id="empty_reset5"><field name="TEXT">_</field></block></value>
+        <next>
+
+      <block type="component_set_get" id="reset_btn6">
+        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn6"></mutation>
+        <field name="COMPONENT_SELECTOR">Btn6</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE"><block type="text" id="empty_reset6"><field name="TEXT">_</field></block></value>
+        <next>
+
+      <block type="component_set_get" id="reset_btn7">
+        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn7"></mutation>
+        <field name="COMPONENT_SELECTOR">Btn7</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE"><block type="text" id="empty_reset7"><field name="TEXT">_</field></block></value>
+        <next>
+
+      <block type="component_set_get" id="reset_btn8">
+        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn8"></mutation>
+        <field name="COMPONENT_SELECTOR">Btn8</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE"><block type="text" id="empty_reset8"><field name="TEXT">_</field></block></value>
+        <next>
+
+      <block type="component_set_get" id="reset_btn9">
+        <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn9"></mutation>
+        <field name="COMPONENT_SELECTOR">Btn9</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE"><block type="text" id="empty_reset9"><field name="TEXT">_</field></block></value>
+        <next>
+
+        <block type="lexical_variable_set" id="reset_turn">
+          <field name="VAR">global turn</field>
+          <value name="VALUE"><block type="text" id="text_reset_x"><field name="TEXT">X</field></block></value>
+        </block>
+</next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block>
+    </statement>
+  </block>
+
+  <yacodeblocks ya-version="213" language-version="34"></yacodeblocks>
+</xml>
