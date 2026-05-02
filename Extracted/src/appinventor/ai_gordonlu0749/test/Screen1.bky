@@ -1,48 +1,44 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block id="c42c001a0ca84b729ee3d34f6ef2c167" type="global_declaration" x="-1000" y="-800">
+  <block id="22858571f3924b279adb8261ca2df3b4" type="global_declaration" x="-1000" y="-800">
     <field name="NAME">turn</field>
-    <value name="VALUE"><block id="80402e52b9d6460d82e01ce048cdb291" type="text"><field name="TEXT">X</field></block></value>
+    <value name="VALUE"><block id="b995b60e681047d0b5836b3879a2e75f" type="text"><field name="TEXT">X</field></block></value>
   </block>
-  <block id="b7e7f1b66c4d444599944fe16a9c3dab" type="global_declaration" x="-1000" y="-750">
+  <block id="d501a290237a4f909e59207094a137ae" type="global_declaration" x="-1000" y="-750">
     <field name="NAME">pending_move</field>
-    <value name="VALUE"><block id="ed1b6ba657614463beb525e7311c5cf7" type="text"><field name="TEXT"></field></block></value>
+    <value name="VALUE"><block id="b130c3093c1d4448a2cc28a26680a394" type="text"><field name="TEXT"></field></block></value>
   </block>
-  <block id="bbd695928568449e8afa33ab34a0d1dc" type="global_declaration" x="-1000" y="-700">
+  <block id="e41bb6fb0c3542a3a21a82b518ac6b32" type="global_declaration" x="-1000" y="-700">
     <field name="NAME">current_answer</field>
-    <value name="VALUE"><block id="a193bb74bd9a493d9ea584e1267b22d3" type="text"><field name="TEXT"></field></block></value>
+    <value name="VALUE"><block id="fb5c52b61b7348c28783960c718e90ed" type="text"><field name="TEXT"></field></block></value>
   </block>
-  <block id="064e7bd0a581438bbcdc74729c77f902" type="global_declaration" x="-1000" y="-650">
+  <block id="1c8954a0c5c145d1bfc80ed9456fceae" type="global_declaration" x="-1000" y="-650">
     <field name="NAME">selected_category</field>
-    <value name="VALUE"><block id="d42294a1ea1448cc8e3f587398dc0bb6" type="text"><field name="TEXT">GEO</field></block></value>
+    <value name="VALUE"><block id="43a44525bc8949afb41c7547d55292f6" type="text"><field name="TEXT">GEO</field></block></value>
+  </block>
+  <block id="be4cf51e4aac49d898893822044149e0" type="global_declaration" x="-1000" y="-600">
+    <field name="NAME">selected_difficulty</field>
+    <value name="VALUE"><block id="28b6aa346da048e19bb347ee837bb675" type="text"><field name="TEXT">EASY</field></block></value>
   </block>
 
-  <block id="bf25a5d1b6f14445b64a9e55b5f00fe5" type="global_declaration" x="-1000" y="-600">
-    <field name="NAME">q_geo</field>
+  <block id="50fcc45f8d3947aabb47763808bff045" type="global_declaration" x="-1000" y="-500">
+    <field name="NAME">q_geo_easy</field>
     <value name="VALUE">
-      <block id="0ecff33474a145fc992815492d84e857" type="lists_create_with">
-        <mutation items="3"></mutation>
+      <block id="c0dd14f80bde4278838dcb4d9639ea2a" type="lists_create_with">
+        <mutation items="2"></mutation>
 
         <value name="ADD0">
-          <block id="3e4230f17fa5480b9728c769328ad4e7" type="lists_create_with">
+          <block id="cbbc0d1e08534366bb623788682d657b" type="lists_create_with">
             <mutation items="2"></mutation>
-            <value name="ADD0"><block id="e5f72ff3c0e8452ca3f28acf51f5a59f" type="text"><field name="TEXT">Geo Easy: Capital of France?</field></block></value>
-            <value name="ADD1"><block id="52deac7109a840c48f9b22cd621e14fb" type="text"><field name="TEXT">paris</field></block></value>
+            <value name="ADD0"><block id="ef5e997ab5d24375be8530a8ee15b2ac" type="text"><field name="TEXT">Capital of France?</field></block></value>
+            <value name="ADD1"><block id="51fc25630062406692ce8b5b74816152" type="text"><field name="TEXT">paris</field></block></value>
           </block>
         </value>
 
         <value name="ADD1">
-          <block id="f97041e5af1a4362b1b347f60785b2f6" type="lists_create_with">
+          <block id="4792013c5fe74111a58f2670680bcafc" type="lists_create_with">
             <mutation items="2"></mutation>
-            <value name="ADD0"><block id="3ea709fc7e154536acc0d24ae6577854" type="text"><field name="TEXT">Geo Med: Capital of Australia?</field></block></value>
-            <value name="ADD1"><block id="9fbac8c8fed246f39ab52b93dc08d685" type="text"><field name="TEXT">canberra</field></block></value>
-          </block>
-        </value>
-
-        <value name="ADD2">
-          <block id="8deb503163314c59be429a2db3b7384d" type="lists_create_with">
-            <mutation items="2"></mutation>
-            <value name="ADD0"><block id="0929dc1cdab94c6fbc4474a7b9002747" type="text"><field name="TEXT">Geo Hard: Capital of Burkina Faso?</field></block></value>
-            <value name="ADD1"><block id="cb6c45ee60e3478ca6eb174927781d05" type="text"><field name="TEXT">ouagadougou</field></block></value>
+            <value name="ADD0"><block id="fbd97c862e5142f58050b11cff915cb2" type="text"><field name="TEXT">Capital of Japan?</field></block></value>
+            <value name="ADD1"><block id="6883752bf3524eae923ce9b35842d18a" type="text"><field name="TEXT">tokyo</field></block></value>
           </block>
         </value>
 
@@ -50,33 +46,25 @@
     </value>
   </block>
 
-  <block id="a14bda161525478eb9f411e51de09d2e" type="global_declaration" x="-1000" y="-550">
-    <field name="NAME">q_math</field>
+  <block id="c322327c23e641dda1500d74b063db50" type="global_declaration" x="-1000" y="-450">
+    <field name="NAME">q_geo_med</field>
     <value name="VALUE">
-      <block id="66b768c5e8ed4ae3869569262e87cd69" type="lists_create_with">
-        <mutation items="3"></mutation>
+      <block id="d7f8df96ea8d422ea0c72fdca3f07155" type="lists_create_with">
+        <mutation items="2"></mutation>
 
         <value name="ADD0">
-          <block id="f087656f1b564f3eb9e4f4cceb377f3a" type="lists_create_with">
+          <block id="ea44f86882944799adc3801053fb03ad" type="lists_create_with">
             <mutation items="2"></mutation>
-            <value name="ADD0"><block id="5ba29561df8b4ce4bca70f8d14e25537" type="text"><field name="TEXT">Math Easy: What is 5 + 7?</field></block></value>
-            <value name="ADD1"><block id="6023ffd4799343b6ad5fb96b733bc282" type="text"><field name="TEXT">12</field></block></value>
+            <value name="ADD0"><block id="adde329e76a84c8c861ff9789e02c59e" type="text"><field name="TEXT">Capital of Australia?</field></block></value>
+            <value name="ADD1"><block id="e5dc49315cd0429abe70b649ac678535" type="text"><field name="TEXT">canberra</field></block></value>
           </block>
         </value>
 
         <value name="ADD1">
-          <block id="8e3ebce23c104dc9b41fdf13c5b2d248" type="lists_create_with">
+          <block id="da701d74f21948c7ac24d7de11822a17" type="lists_create_with">
             <mutation items="2"></mutation>
-            <value name="ADD0"><block id="c1dc6fbf9a97443982c1150e4b5a888f" type="text"><field name="TEXT">Math Med: What is 12 * 12?</field></block></value>
-            <value name="ADD1"><block id="1fd2400e919d464282e64b9be2529da5" type="text"><field name="TEXT">144</field></block></value>
-          </block>
-        </value>
-
-        <value name="ADD2">
-          <block id="1454a1e7ffc7410b9f17eaef4c9df434" type="lists_create_with">
-            <mutation items="2"></mutation>
-            <value name="ADD0"><block id="05b1c766176546bc9c53fe20e154ac34" type="text"><field name="TEXT">Math Hard: Square root of 225?</field></block></value>
-            <value name="ADD1"><block id="4980496ac85744cca23b86764dafa6a6" type="text"><field name="TEXT">15</field></block></value>
+            <value name="ADD0"><block id="975e48b1ef7b4c06aeaf8bab25b5f00e" type="text"><field name="TEXT">Capital of Canada?</field></block></value>
+            <value name="ADD1"><block id="01c279e9e8a34774871ed64bdfd37df0" type="text"><field name="TEXT">ottawa</field></block></value>
           </block>
         </value>
 
@@ -84,33 +72,25 @@
     </value>
   </block>
 
-  <block id="394326f25c8144ab8764318d019ad72e" type="global_declaration" x="-1000" y="-500">
-    <field name="NAME">q_trivia</field>
+  <block id="af915553c3494cd7ae0c9f0984c4d28a" type="global_declaration" x="-1000" y="-400">
+    <field name="NAME">q_geo_hard</field>
     <value name="VALUE">
-      <block id="a811232e25654ca6b3c13ccdf4f6dbf5" type="lists_create_with">
-        <mutation items="3"></mutation>
+      <block id="7852358209e94f9d91a35b78b07c5f42" type="lists_create_with">
+        <mutation items="2"></mutation>
 
         <value name="ADD0">
-          <block id="685d42df70b14c25afe3cd4fe77533f7" type="lists_create_with">
+          <block id="e71a5ef9aa9343ad8b94d62d3594d4fa" type="lists_create_with">
             <mutation items="2"></mutation>
-            <value name="ADD0"><block id="256b3aa3204e406ba90628f77575cc40" type="text"><field name="TEXT">Trivia Easy: Color of a school bus?</field></block></value>
-            <value name="ADD1"><block id="3237987e85d64945bbc8f599b0b3c686" type="text"><field name="TEXT">yellow</field></block></value>
+            <value name="ADD0"><block id="cc16121daa964c1a9a07ed34ceeac213" type="text"><field name="TEXT">Capital of Burkina Faso?</field></block></value>
+            <value name="ADD1"><block id="e4551c45db6242e9a92bd092274ae055" type="text"><field name="TEXT">ouagadougou</field></block></value>
           </block>
         </value>
 
         <value name="ADD1">
-          <block id="d2cc20f720d8415e9557702c35740dbf" type="lists_create_with">
+          <block id="c7682e98d8844e9f809a978264f34a67" type="lists_create_with">
             <mutation items="2"></mutation>
-            <value name="ADD0"><block id="6e445df4942f42518602f1fe41799bd5" type="text"><field name="TEXT">Trivia Med: How many continents are there?</field></block></value>
-            <value name="ADD1"><block id="c141129de07f45ccad94a37099e83a73" type="text"><field name="TEXT">7</field></block></value>
-          </block>
-        </value>
-
-        <value name="ADD2">
-          <block id="478e7dfe36624f93afc7ad0d5016658f" type="lists_create_with">
-            <mutation items="2"></mutation>
-            <value name="ADD0"><block id="5768f8eb3c1a4882bdbcd718f9244567" type="text"><field name="TEXT">Trivia Hard: A network security system? (Hint: firewall)</field></block></value>
-            <value name="ADD1"><block id="a9ca777082d6485fb858c042f69dffec" type="text"><field name="TEXT">firewall</field></block></value>
+            <value name="ADD0"><block id="2ddb3a4913d34426b52db9a5053d7740" type="text"><field name="TEXT">Capital of Madagascar?</field></block></value>
+            <value name="ADD1"><block id="128da51487ad41b092daf2dfe84a2b0f" type="text"><field name="TEXT">antananarivo</field></block></value>
           </block>
         </value>
 
@@ -118,30 +98,181 @@
     </value>
   </block>
 
-  <block id="85659719fbdd41f5bf21c325ee2669f9" type="component_event" x="-1500" y="-450">
+  <block id="44ff77c6ee6c450db8bd4bcdd320d00c" type="global_declaration" x="-1000" y="-350">
+    <field name="NAME">q_math_easy</field>
+    <value name="VALUE">
+      <block id="dd7efe03357348219ec97cdb585cdc0c" type="lists_create_with">
+        <mutation items="2"></mutation>
+
+        <value name="ADD0">
+          <block id="81e511b4a3284183aa5cf4bad17ba7c2" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="e2903da1a03340b7adca924824ff01fc" type="text"><field name="TEXT">What is 5 + 7?</field></block></value>
+            <value name="ADD1"><block id="c6258e27b41e4654b7f63b67f2dcf0fe" type="text"><field name="TEXT">12</field></block></value>
+          </block>
+        </value>
+
+        <value name="ADD1">
+          <block id="71d82069c8274620b314a59a97f43f54" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="b041ad5948ce4efb910af49b72ddd28e" type="text"><field name="TEXT">What is 20 - 6?</field></block></value>
+            <value name="ADD1"><block id="77bc90cae4aa4989867ab259ea9d7631" type="text"><field name="TEXT">14</field></block></value>
+          </block>
+        </value>
+
+      </block>
+    </value>
+  </block>
+
+  <block id="45d3abb008d34d18ae76c60ec7fc5119" type="global_declaration" x="-1000" y="-300">
+    <field name="NAME">q_math_med</field>
+    <value name="VALUE">
+      <block id="733359b31b27476b82a3198d82964168" type="lists_create_with">
+        <mutation items="2"></mutation>
+
+        <value name="ADD0">
+          <block id="dc7105c73fd4406eb1b4d43ed45e71ff" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="e0d377dff8794009acd5584c8124e625" type="text"><field name="TEXT">What is 12 * 12?</field></block></value>
+            <value name="ADD1"><block id="6dbf05f9ca4a4013b9b406b06604f80d" type="text"><field name="TEXT">144</field></block></value>
+          </block>
+        </value>
+
+        <value name="ADD1">
+          <block id="98c3f88acf4b4a699e07e50e78934779" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="0c3c44faa4a84f91a5bc159d63d5d235" type="text"><field name="TEXT">What is 56 / 8?</field></block></value>
+            <value name="ADD1"><block id="6da66cd2540c4b6d8cd01f3204228912" type="text"><field name="TEXT">7</field></block></value>
+          </block>
+        </value>
+
+      </block>
+    </value>
+  </block>
+
+  <block id="473570e626b7477d8097b449f5756a80" type="global_declaration" x="-1000" y="-250">
+    <field name="NAME">q_math_hard</field>
+    <value name="VALUE">
+      <block id="24ebeac6a3b8447c9527c059584f141c" type="lists_create_with">
+        <mutation items="2"></mutation>
+
+        <value name="ADD0">
+          <block id="d72355d1826a453b916bc5c1a5c06f62" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="9307f83ee3e548c98946d8be3c7c77c3" type="text"><field name="TEXT">Square root of 225?</field></block></value>
+            <value name="ADD1"><block id="8824960f73a94437b899ff30cc672695" type="text"><field name="TEXT">15</field></block></value>
+          </block>
+        </value>
+
+        <value name="ADD1">
+          <block id="76a10e5452b349a6bfc8057a23dcfe76" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="8036bf1856b844f091350265fa106f8c" type="text"><field name="TEXT">2 to the power of 8?</field></block></value>
+            <value name="ADD1"><block id="ecb71e77623a44e497c2c968837d285f" type="text"><field name="TEXT">256</field></block></value>
+          </block>
+        </value>
+
+      </block>
+    </value>
+  </block>
+
+  <block id="c1ac582de84b4086b28dcc37fff8d4de" type="global_declaration" x="-1000" y="-200">
+    <field name="NAME">q_trivia_easy</field>
+    <value name="VALUE">
+      <block id="9533c053d8074179be6d5eb53539c5e9" type="lists_create_with">
+        <mutation items="2"></mutation>
+
+        <value name="ADD0">
+          <block id="622ce47816d84f6880c9c24e17c8498e" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="315aeec90995473c9d16881ec4ae4d91" type="text"><field name="TEXT">Color of a school bus?</field></block></value>
+            <value name="ADD1"><block id="b70d7d9ebadd40459df2ae9512683f8b" type="text"><field name="TEXT">yellow</field></block></value>
+          </block>
+        </value>
+
+        <value name="ADD1">
+          <block id="4beed25dd351472ebf81421a93a8bf54" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="6e83d015f66346069cb18f0fb0336582" type="text"><field name="TEXT">How many legs does a spider have?</field></block></value>
+            <value name="ADD1"><block id="fb609a043e3f413da8f8761cef854ce1" type="text"><field name="TEXT">8</field></block></value>
+          </block>
+        </value>
+
+      </block>
+    </value>
+  </block>
+
+  <block id="a1a5ff4ba6394d7abe5b67e378451075" type="global_declaration" x="-1000" y="-150">
+    <field name="NAME">q_trivia_med</field>
+    <value name="VALUE">
+      <block id="93e12ed57e464361871542e0fabf0df5" type="lists_create_with">
+        <mutation items="2"></mutation>
+
+        <value name="ADD0">
+          <block id="54d7f1bb22e047f3a9b0295b23a7de5b" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="e41952955cdc42bda8efa556a550f3ab" type="text"><field name="TEXT">How many continents are there?</field></block></value>
+            <value name="ADD1"><block id="1405d1da163247f19fd9aeb721daee04" type="text"><field name="TEXT">7</field></block></value>
+          </block>
+        </value>
+
+        <value name="ADD1">
+          <block id="ef78f126ca804234b8ca91724b5163c5" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="7506593820884244b0b68a8c1ef537e0" type="text"><field name="TEXT">Who wrote Romeo and Juliet?</field></block></value>
+            <value name="ADD1"><block id="38d1696730854b4f946c5350f792bf16" type="text"><field name="TEXT">shakespeare</field></block></value>
+          </block>
+        </value>
+
+      </block>
+    </value>
+  </block>
+
+  <block id="9a27b27004e042ecbdb44bc79b43d317" type="global_declaration" x="-1000" y="-100">
+    <field name="NAME">q_trivia_hard</field>
+    <value name="VALUE">
+      <block id="b5bf38f5ec92472da5abcb756c3e8ba7" type="lists_create_with">
+        <mutation items="2"></mutation>
+
+        <value name="ADD0">
+          <block id="e1bce0aac2d14927903f1baec6705aa1" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="b73bf3fb711842e48142cc09544b5615" type="text"><field name="TEXT">A network security system? (Hint: firewall)</field></block></value>
+            <value name="ADD1"><block id="2a3b43f26a094ac990df1cb0982375bb" type="text"><field name="TEXT">firewall</field></block></value>
+          </block>
+        </value>
+
+        <value name="ADD1">
+          <block id="e003e499dd324e1da3078633ce7d12d5" type="lists_create_with">
+            <mutation items="2"></mutation>
+            <value name="ADD0"><block id="7bbf768b5e6d4e26a69296013e06dd85" type="text"><field name="TEXT">What element is 'Fe' on the periodic table?</field></block></value>
+            <value name="ADD1"><block id="fce39a69f84a4cecb2d18327f503f51c" type="text"><field name="TEXT">iron</field></block></value>
+          </block>
+        </value>
+
+      </block>
+    </value>
+  </block>
+
+  <block id="ce8b7b17ae73423f919cfc526d3e4371" type="component_event" x="-1500" y="-50">
     <mutation component_type="Button" is_generic="false" instance_name="BtnGeo" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">BtnGeo</field>
     <statement name="DO">
-      <block id="a7bd04f2476943b19d658958aa97db5b" type="lexical_variable_set">
+      <block id="ac37331308b248e6b8dfb47f87841e9a" type="lexical_variable_set">
         <field name="VAR">global selected_category</field>
-        <value name="VALUE"><block id="7560843942d546ea91fee955186029a1" type="text"><field name="TEXT">GEO</field></block></value>
+        <value name="VALUE"><block id="85ba726775164be0a5dedb33c90465f5" type="text"><field name="TEXT">GEO</field></block></value>
         <next>
-          <block id="7e628e09a4724f4e96a5ddc02cee5792" type="component_set_get">
+          <block id="80b923b47c4b40bbbcf43410b4940e33" type="component_set_get">
             <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewCategory"></mutation>
             <field name="COMPONENT_SELECTOR">ViewCategory</field>
             <field name="PROP">Visible</field>
-            <value name="VALUE"><block id="c2ad0bcae3b843f0a82c6c78b59299b8" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+            <value name="VALUE"><block id="66a20eff64c8429788ef6bea7ab1cab1" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
             <next>
-              <block id="ffcb3ed2863c453bb2b539923044225a" type="component_set_get">
-                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewGame"></mutation>
-                <field name="COMPONENT_SELECTOR">ViewGame</field>
+              <block id="eb92af3556684e1aa079bb97755c9521" type="component_set_get">
+                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewDifficulty"></mutation>
+                <field name="COMPONENT_SELECTOR">ViewDifficulty</field>
                 <field name="PROP">Visible</field>
-                <value name="VALUE"><block id="7a3d3c84af904bdc9605a6739314d070" type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
-                <next>
-                  <block id="64719290ea1042adb51ef56f44205cc9" type="procedures_callnoreturn">
-                    <mutation name="ResetGame"></mutation>
-                  </block>
-                </next>
+                <value name="VALUE"><block id="9ff77df95a73479480bdbfab45dc0801" type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
               </block>
             </next>
           </block>
@@ -150,30 +281,25 @@
     </statement>
   </block>
 
-  <block id="5e0ef1530687449d91aa0bbbeb6e486f" type="component_event" x="-1500" y="-350">
+  <block id="89c2854726744d2fb54762aae13434a8" type="component_event" x="-1500" y="50">
     <mutation component_type="Button" is_generic="false" instance_name="BtnMath" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">BtnMath</field>
     <statement name="DO">
-      <block id="4dc2d2b477714e00b868be820cf81d59" type="lexical_variable_set">
+      <block id="566f5e42c66f48a1bbcddc57371a38bf" type="lexical_variable_set">
         <field name="VAR">global selected_category</field>
-        <value name="VALUE"><block id="82106475fcc740a68afa7d819ee49db4" type="text"><field name="TEXT">MATH</field></block></value>
+        <value name="VALUE"><block id="42eab7494509458ba5777a7c1b0f97a8" type="text"><field name="TEXT">MATH</field></block></value>
         <next>
-          <block id="be06371ef4594d2b8b384d0759a2f27d" type="component_set_get">
+          <block id="d17e132d11df4b91b06c2b427a1780fa" type="component_set_get">
             <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewCategory"></mutation>
             <field name="COMPONENT_SELECTOR">ViewCategory</field>
             <field name="PROP">Visible</field>
-            <value name="VALUE"><block id="c4cfc8ae3d264878a4ea1ddbc238497b" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+            <value name="VALUE"><block id="0db37fd41b75417b84bb38ef056af14e" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
             <next>
-              <block id="79d5c327e27a44e48e8ca6678839f92a" type="component_set_get">
-                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewGame"></mutation>
-                <field name="COMPONENT_SELECTOR">ViewGame</field>
+              <block id="9fe31fea9e0e4c4aa560504a46f4b2eb" type="component_set_get">
+                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewDifficulty"></mutation>
+                <field name="COMPONENT_SELECTOR">ViewDifficulty</field>
                 <field name="PROP">Visible</field>
-                <value name="VALUE"><block id="d0fb47c700074e48a4c3e6cc2b0f734a" type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
-                <next>
-                  <block id="76ea84804fe74c5f802e8093c08d27dc" type="procedures_callnoreturn">
-                    <mutation name="ResetGame"></mutation>
-                  </block>
-                </next>
+                <value name="VALUE"><block id="814b2340b5cc41548ed93029630cbaff" type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
               </block>
             </next>
           </block>
@@ -182,27 +308,54 @@
     </statement>
   </block>
 
-  <block id="0d2b4c2d4fb3433b9a9ace09402bb397" type="component_event" x="-1500" y="-250">
+  <block id="381d44fa6dcb4b2f892832c722c73a00" type="component_event" x="-1500" y="150">
     <mutation component_type="Button" is_generic="false" instance_name="BtnTrivia" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">BtnTrivia</field>
     <statement name="DO">
-      <block id="25eb76d1fca94f1c919004a3b910cac8" type="lexical_variable_set">
+      <block id="69e478d336254282b7261b9aaaf115ea" type="lexical_variable_set">
         <field name="VAR">global selected_category</field>
-        <value name="VALUE"><block id="97b4e0f70de54690bff083fcd71ba8f2" type="text"><field name="TEXT">TRIV</field></block></value>
+        <value name="VALUE"><block id="ad391a3f6cce4f33923c587b3d47655e" type="text"><field name="TEXT">TRIV</field></block></value>
         <next>
-          <block id="8c21cee7b7484007844dac0da808e965" type="component_set_get">
+          <block id="6be1e9e08b2240a7ac7de02cb6a041c9" type="component_set_get">
             <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewCategory"></mutation>
             <field name="COMPONENT_SELECTOR">ViewCategory</field>
             <field name="PROP">Visible</field>
-            <value name="VALUE"><block id="6f993b5b39c64c5b9838d37222e6eb8b" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+            <value name="VALUE"><block id="d23973de10394f30b446576c095d836d" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
             <next>
-              <block id="a4a8cb3a277e44649720394d83c47a6e" type="component_set_get">
+              <block id="cd9327b3bd9f4597ae98ab7534ddb8d5" type="component_set_get">
+                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewDifficulty"></mutation>
+                <field name="COMPONENT_SELECTOR">ViewDifficulty</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE"><block id="0caa24a8e11d4145ba1b76c394c42a6a" type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+
+  <block id="0703d982c4044c32a9aab1040836bc4b" type="component_event" x="-1500" y="250">
+    <mutation component_type="Button" is_generic="false" instance_name="BtnEasy" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">BtnEasy</field>
+    <statement name="DO">
+      <block id="61249c22a2e54f2f8a14627d3823f584" type="lexical_variable_set">
+        <field name="VAR">global selected_difficulty</field>
+        <value name="VALUE"><block id="347575ccfd6549a8bd893539110f9b58" type="text"><field name="TEXT">EASY</field></block></value>
+        <next>
+          <block id="b46b8d86ff6d42d8bb6d88a4fd0e4cd9" type="component_set_get">
+            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewDifficulty"></mutation>
+            <field name="COMPONENT_SELECTOR">ViewDifficulty</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE"><block id="084fd09054eb4843ac6095ac67611975" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+            <next>
+              <block id="e4f9f2e16c284e73aefdcc8809a70fa9" type="component_set_get">
                 <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewGame"></mutation>
                 <field name="COMPONENT_SELECTOR">ViewGame</field>
                 <field name="PROP">Visible</field>
-                <value name="VALUE"><block id="ac5c28d561df4aa687a50710fb2a49f4" type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
+                <value name="VALUE"><block id="1e398f5d50314adba744e70946597963" type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
                 <next>
-                  <block id="f9d66581d9a6477a90fefcd1e2643872" type="procedures_callnoreturn">
+                  <block id="082e5c9132b542e2bfcde5909fc1d51d" type="procedures_callnoreturn">
                     <mutation name="ResetGame"></mutation>
                   </block>
                 </next>
@@ -214,36 +367,108 @@
     </statement>
   </block>
 
-  <block id="2fcc6f07b6de472a8720ec0202b5f522" type="component_event" x="-1500" y="-150">
-    <mutation component_type="Button" is_generic="false" instance_name="BtnBack" event_name="Click"></mutation>
-    <field name="COMPONENT_SELECTOR">BtnBack</field>
+  <block id="47984f0d3d024b9f9e61f94d9a77ed2f" type="component_event" x="-1500" y="350">
+    <mutation component_type="Button" is_generic="false" instance_name="BtnMed" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">BtnMed</field>
     <statement name="DO">
-      <block id="8b98760acc884f20bcbbc014a64be42b" type="component_set_get">
-        <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewCategory"></mutation>
-        <field name="COMPONENT_SELECTOR">ViewCategory</field>
-        <field name="PROP">Visible</field>
-        <value name="VALUE"><block id="351c7d3ff92b4c14870570bada3c12b1" type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
+      <block id="9c821309cf9c44afa467810ba1634d3c" type="lexical_variable_set">
+        <field name="VAR">global selected_difficulty</field>
+        <value name="VALUE"><block id="953f731743b444439d0f3de35626eb54" type="text"><field name="TEXT">MED</field></block></value>
         <next>
-          <block id="9c70a97e9ffe439da41ffdd069e0738d" type="component_set_get">
-            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewGame"></mutation>
-            <field name="COMPONENT_SELECTOR">ViewGame</field>
+          <block id="1be4019e2a9a41bf88fb99f5a983b73e" type="component_set_get">
+            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewDifficulty"></mutation>
+            <field name="COMPONENT_SELECTOR">ViewDifficulty</field>
             <field name="PROP">Visible</field>
-            <value name="VALUE"><block id="70665d2f2c88425db79464a286637107" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+            <value name="VALUE"><block id="8894ed20a12f42688cbf657243a8f178" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+            <next>
+              <block id="029447e17ab7440196a08453d1626168" type="component_set_get">
+                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewGame"></mutation>
+                <field name="COMPONENT_SELECTOR">ViewGame</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE"><block id="c884b200c4964211a2c5ee350edef107" type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
+                <next>
+                  <block id="e080f4d7c28d48819d583a8a8e39d352" type="procedures_callnoreturn">
+                    <mutation name="ResetGame"></mutation>
+                  </block>
+                </next>
+              </block>
+            </next>
           </block>
         </next>
       </block>
     </statement>
   </block>
 
-  <block id="5f5336898ee949b786491ceddd2119f6" type="procedures_defnoreturn" x="-1000" y="-400">
+  <block id="ae89df7c8d5c446f915772d28f7ac6ed" type="component_event" x="-1500" y="450">
+    <mutation component_type="Button" is_generic="false" instance_name="BtnHard" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">BtnHard</field>
+    <statement name="DO">
+      <block id="9dbaf3f8816c4212ab20af061ead0350" type="lexical_variable_set">
+        <field name="VAR">global selected_difficulty</field>
+        <value name="VALUE"><block id="6348f001dd2944859629fe94be276728" type="text"><field name="TEXT">HARD</field></block></value>
+        <next>
+          <block id="a33e7ba51b1444be9a4f904e984c4ceb" type="component_set_get">
+            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewDifficulty"></mutation>
+            <field name="COMPONENT_SELECTOR">ViewDifficulty</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE"><block id="56d6664ea7124408bfc24e95180af247" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+            <next>
+              <block id="52aa497d666b41d4a8dc8b2436273c95" type="component_set_get">
+                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewGame"></mutation>
+                <field name="COMPONENT_SELECTOR">ViewGame</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE"><block id="b4b6bb010d7c4514bcf47305372f4a93" type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
+                <next>
+                  <block id="e741f812a51c4c25b5caf92ca3e19706" type="procedures_callnoreturn">
+                    <mutation name="ResetGame"></mutation>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+
+  <block id="825a495db6954ae494ca81a394856553" type="component_event" x="-1500" y="550">
+    <mutation component_type="Button" is_generic="false" instance_name="BtnBack" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">BtnBack</field>
+    <statement name="DO">
+      <block id="275ac8da08e24047b90d176b043fa708" type="component_set_get">
+        <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewCategory"></mutation>
+        <field name="COMPONENT_SELECTOR">ViewCategory</field>
+        <field name="PROP">Visible</field>
+        <value name="VALUE"><block id="a099555e31db43d9b6ca90bf29dc5291" type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
+        <next>
+          <block id="95e468ca51654e6e88c32288bd7d28ed" type="component_set_get">
+            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewDifficulty"></mutation>
+            <field name="COMPONENT_SELECTOR">ViewDifficulty</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE"><block id="627f2a13f8564caabb18ae6c0ad66026" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+            <next>
+              <block id="0ca55ff8fb274ab398eb1fcf29b36f4e" type="component_set_get">
+                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewGame"></mutation>
+                <field name="COMPONENT_SELECTOR">ViewGame</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE"><block id="a6c75b23fd9b4a2eac5c74cf692f797b" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+
+  <block id="8b892db660494546b40eaad530d2eb79" type="procedures_defnoreturn" x="-1000" y="-400">
     <mutation><arg name="btnId"></arg></mutation>
     <field name="NAME">HandleMove</field>
     <statement name="STACK">
-      <block id="ccf1e34c41fc400da5b33ad88d703f8a" type="lexical_variable_set">
+      <block id="ce91ba23c5374d6284700f225e81a35c" type="lexical_variable_set">
         <field name="VAR">global pending_move</field>
-        <value name="VALUE"><block id="6371ce0772fa44a4aeddaebbddd61494" type="lexical_variable_get"><field name="VAR">btnId</field></block></value>
+        <value name="VALUE"><block id="8bacae0e9cb844108f245e4388578f93" type="lexical_variable_get"><field name="VAR">btnId</field></block></value>
         <next>
-          <block id="1d7cfb207c28459589095bdf4199cf2f" type="procedures_callnoreturn">
+          <block id="eca35e988e084c4eaa32d46a5b3bb8ad" type="procedures_callnoreturn">
             <mutation name="AskQuestion"></mutation>
           </block>
         </next>
@@ -251,357 +476,431 @@
     </statement>
   </block>
 
-  <!-- Ask Question (with Category filter) -->
-  <block id="6b0b48c23c7446f3adf6c6966d86f4e8" type="procedures_defnoreturn" x="-1000" y="-200">
+  <!-- Ask Question (with strict Category + Difficulty routing) -->
+  <block id="69fc3617bbef4fdfb8f7dd80e644bd7b" type="global_declaration" x="-1000" y="-150">
+    <field name="NAME">current_q_pair</field>
+    <value name="VALUE"><block id="d4f95b2268944bc0b8cdd2dafabd13e5" type="lists_create_with"><mutation items="0"></mutation></block></value>
+  </block>
+
+  <block id="f15e94039df7431790a33991a59421e9" type="procedures_defnoreturn" x="-1000" y="-100">
     <field name="NAME">AskQuestion</field>
     <statement name="STACK">
-      <block id="a06f78ffa637442b959e518034b5b569" type="local_declaration_statement">
-        <mutation><localname name="q_pair"></localname></mutation>
-        <field name="VAR0">q_pair</field>
-        <value name="DECL0">
-          <block id="4e3dc4ca603344419f4952d68533b5d8" type="controls_choose">
-            <value name="TEST">
-              <block id="3e007f14bbc840a19049a71a70078eae" type="logic_compare">
-                <field name="OP">EQ</field>
-                <value name="A"><block id="b09573b68c5b463b9b7a4b2f1a6dfd72" type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value>
-                <value name="B"><block id="e671cb9944ea4fb3ba523a9e6e403002" type="text"><field name="TEXT">GEO</field></block></value>
-              </block>
-            </value>
-            <value name="THENRETURN">
-              <block id="15116c09883540358efcabebd2dc62d0" type="lists_pick_random_item"><value name="LIST"><block id="ee4707a16c17447da42ced0a93e415e6" type="lexical_variable_get"><field name="VAR">global q_geo</field></block></value></block>
-            </value>
-            <value name="ELSERETURN">
-              <block id="f33da5d35f4148e3b5146a26685c8956" type="controls_choose">
-                <value name="TEST">
-                  <block id="ca6ca07eabdb47a88ebe375dc2d57121" type="logic_compare">
-                    <field name="OP">EQ</field>
-                    <value name="A"><block id="e74ad093ee6643a2b67f2db0c2dfdba9" type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value>
-                    <value name="B"><block id="81d71ccff1334e09840e00d503c6be30" type="text"><field name="TEXT">MATH</field></block></value>
-                  </block>
-                </value>
-                <value name="THENRETURN">
-                  <block id="f5ea0b1d622a42e7b5bca34e6e004dee" type="lists_pick_random_item"><value name="LIST"><block id="55fb8e4f670c4f16b5e6de83a7120b44" type="lexical_variable_get"><field name="VAR">global q_math</field></block></value></block>
-                </value>
-                <value name="ELSERETURN">
-                  <block id="56c6a4bd0e3241f6890176096f34b5dd" type="lists_pick_random_item"><value name="LIST"><block id="bbb5b207e1684478a0f7f0ff802ff3b1" type="lexical_variable_get"><field name="VAR">global q_trivia</field></block></value></block>
-                </value>
-              </block>
-            </value>
+      <block id="7c8106ff10b84fdb958af26dbc035500" type="controls_if">
+        <mutation elseif="8"></mutation>
+        <!-- Geo Easy -->
+        <value name="IF0">
+          <block id="1561e753a7e5426daf330e745740b558" type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block id="8772576f72a04945b3684e7f3ac9dae9" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="f4d0f388627d4faca5868b7e0530217e" type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block id="a3dc676a49f141c79efdb4aadc0522ed" type="text"><field name="TEXT">GEO</field></block></value></block></value>
+            <value name="B"><block id="1a5f6d1fe63f4a119f40c2b219b4af56" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="80e7b8bf1d824945bfddbbd9f4ce6bb1" type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block id="efc96067d33d4bd6900e9b72b42ea5f7" type="text"><field name="TEXT">EASY</field></block></value></block></value>
           </block>
         </value>
-        <statement name="STACK">
-          <block id="bcd7bae5756b4c9ca372f06b6789275e" type="lexical_variable_set">
+        <statement name="DO0">
+          <block id="f0899a11c7c245f1a5d48d192560bbb2" type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block id="a3cf568ae2834a77958895b309fd261e" type="lists_pick_random_item"><value name="LIST"><block id="290a7abcc59d4a8280d2a5b165cef21a" type="lexical_variable_get"><field name="VAR">global q_geo_easy</field></block></value></block></value></block>
+        </statement>
+        <!-- Geo Med -->
+        <value name="IF1">
+          <block id="e0cd47f5082642c887f51a5d0086d15b" type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block id="01b26fef3ad440408e6f3f1a9d746977" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="47b0b4783073491ab3e7702053ec2757" type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block id="18c58c528b57409d9df5d53543b3dcf8" type="text"><field name="TEXT">GEO</field></block></value></block></value>
+            <value name="B"><block id="0f28abd584a34ccf8fd1f7b5326f1f53" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="34584e1f64304f498885cb9566fc57bd" type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block id="8094c487e7574bc78c18cbcd07fd9b69" type="text"><field name="TEXT">MED</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block id="f6e7805477da40efbce1ae6a7767ad02" type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block id="a12846e3ccb948c39f29f87096b1be70" type="lists_pick_random_item"><value name="LIST"><block id="9528e449c0474c768a97817110a0cbc6" type="lexical_variable_get"><field name="VAR">global q_geo_med</field></block></value></block></value></block>
+        </statement>
+        <!-- Geo Hard -->
+        <value name="IF2">
+          <block id="c04e4e819143470cae9dbedaaf0bcf4d" type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block id="92791d2d8d7842a197b4a26122933525" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="28b4cd0fa2ff4405b7b1942633361ce4" type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block id="7a01d5a911634544a91265ca18848bf0" type="text"><field name="TEXT">GEO</field></block></value></block></value>
+            <value name="B"><block id="fea52b49dfa449dfa6a3c7233b2ad847" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="284d02882446401b97f844a5bcc4eedb" type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block id="d5c3f3861d1d46fa9e490fb4d43259bc" type="text"><field name="TEXT">HARD</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block id="e5ec4277d6564eedad6bfebfdc3e6243" type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block id="516e6422e49e40228193cc23d682cb48" type="lists_pick_random_item"><value name="LIST"><block id="7e19cc0e3c3e44e5a75189e88f7de8ee" type="lexical_variable_get"><field name="VAR">global q_geo_hard</field></block></value></block></value></block>
+        </statement>
+
+        <!-- Math Easy -->
+        <value name="IF3">
+          <block id="24b372dece4948a0bca8f26c605f6098" type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block id="e4774e17415c42d8991bf0a96646c356" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="4506c78a918c4a9f9c91ae70f4cdd323" type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block id="5443caa7664b44018916e2cd67d24450" type="text"><field name="TEXT">MATH</field></block></value></block></value>
+            <value name="B"><block id="3437dcbd61a94c5992a1adfcda9911b1" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="0c387e29bd6c476ebe09b86c42ac2143" type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block id="5280cfe529414170bfb568c15b0fe35e" type="text"><field name="TEXT">EASY</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO3">
+          <block id="5e45cf6780d945ada88385974814b0fd" type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block id="c62201383acd4458a42a67d7680d6718" type="lists_pick_random_item"><value name="LIST"><block id="d07c2862ddd34a10ab117fe7d9035d22" type="lexical_variable_get"><field name="VAR">global q_math_easy</field></block></value></block></value></block>
+        </statement>
+        <!-- Math Med -->
+        <value name="IF4">
+          <block id="cf93db209231470db6e2b8434fe26e28" type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block id="813f950d653f4380830c734e8635b7d3" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="37172626580747a99df37a064b99aee2" type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block id="9d01748d5da447bcae8ade5b65c19a37" type="text"><field name="TEXT">MATH</field></block></value></block></value>
+            <value name="B"><block id="6dd4da2dede44558b964ef1241c85cf8" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="904f0c7f3f5b4fde9d04af6789d93403" type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block id="c5da6060dcfc4dcd9eb5b02b195f2696" type="text"><field name="TEXT">MED</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO4">
+          <block id="fd1a0754df8643feb5eedb1f03198ab4" type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block id="0fc3f7fee9744efdb4ddbee4b3d17e45" type="lists_pick_random_item"><value name="LIST"><block id="4a66c71b9f724c04b48c06f7d511b00a" type="lexical_variable_get"><field name="VAR">global q_math_med</field></block></value></block></value></block>
+        </statement>
+        <!-- Math Hard -->
+        <value name="IF5">
+          <block id="e3c7725943c04765a93e47a2693f67bb" type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block id="e2e18ae8ff6c48bd9b5601b6dba7b877" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="e3cc23d9b83b4f5cab88ae64e63a56d4" type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block id="fc2f463ae6bf43f99e167afa9ac9e259" type="text"><field name="TEXT">MATH</field></block></value></block></value>
+            <value name="B"><block id="6e5a461b0b674b30937e644095af8b03" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="85b9fe00b59e40ef81213fa9e450225b" type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block id="c879a2b8c21f4d188f5d3c521f343788" type="text"><field name="TEXT">HARD</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO5">
+          <block id="bf9208e1169747e6b6a1064e335fe979" type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block id="c204763ae44f4ffaa00ba63bb2fcdb74" type="lists_pick_random_item"><value name="LIST"><block id="e1ef9f2396994e0ebbc9e46c89d9980a" type="lexical_variable_get"><field name="VAR">global q_math_hard</field></block></value></block></value></block>
+        </statement>
+
+        <!-- Trivia Easy -->
+        <value name="IF6">
+          <block id="0976bcbe70194b9aad6fbb69eabffac7" type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block id="9b21f3b3dcd64ddba3f7a11f6a6344c8" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="851aeefcb2144ff791d391168b3c88bf" type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block id="06b5645ad3574c24a571239578bf6a08" type="text"><field name="TEXT">TRIV</field></block></value></block></value>
+            <value name="B"><block id="81aff64d53204a8d98fca7f9989f877c" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="1fd1b92fc315473286002a671b512d2b" type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block id="8b8c02d5a74f4162a4490043a3364695" type="text"><field name="TEXT">EASY</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO6">
+          <block id="c5f14d0e16b34d5a8c3e290c40e66c80" type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block id="9d8b8f11cd404f0fbd7f962168857541" type="lists_pick_random_item"><value name="LIST"><block id="3620907bb1b94a8487c3282929deaae2" type="lexical_variable_get"><field name="VAR">global q_trivia_easy</field></block></value></block></value></block>
+        </statement>
+        <!-- Trivia Med -->
+        <value name="IF7">
+          <block id="1fafc983a1b34666837d37e55250e76b" type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block id="5171df6683a940d899c1a28bbe68390a" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="33191c3bc5be4ff790d7dd9fb8273f18" type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block id="39032397299a48a298eb69253264e9c2" type="text"><field name="TEXT">TRIV</field></block></value></block></value>
+            <value name="B"><block id="f1091fc381f14eebb516b5d6daf15496" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="d0fb08133ef34560a15723c8f9ff43f5" type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block id="32bdf79106204f67aebb73bffadd6509" type="text"><field name="TEXT">MED</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO7">
+          <block id="d4c522ca52844cf78da97e6e65d43932" type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block id="2c29ae67996c4135b74c6f9744cde67f" type="lists_pick_random_item"><value name="LIST"><block id="c98a61c0138d41139c77af03ae2fe80d" type="lexical_variable_get"><field name="VAR">global q_trivia_med</field></block></value></block></value></block>
+        </statement>
+        <!-- Trivia Hard -->
+        <value name="IF8">
+          <block id="7f8cdacd8082445c95f2a6430d549f87" type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block id="d575bff7f6944f98a6476370b8dc6a92" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="4a45b9c388994d9990ce331c54f54757" type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block id="7585c045e9d2442f8eb1278f28e96fae" type="text"><field name="TEXT">TRIV</field></block></value></block></value>
+            <value name="B"><block id="e65b6351ade34097960349b33c990de9" type="logic_compare"><field name="OP">EQ</field><value name="A"><block id="c596d33827f1420183c6cd308ded9753" type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block id="a08cac557fd74d94891f328de4cb0512" type="text"><field name="TEXT">HARD</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO8">
+          <block id="e24f7b38ca254a7fa164613f3218f967" type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block id="f47eb4563393477dbd30705e5587c7ea" type="lists_pick_random_item"><value name="LIST"><block id="d9c7e004c36b47ed816619c18f469837" type="lexical_variable_get"><field name="VAR">global q_trivia_hard</field></block></value></block></value></block>
+        </statement>
+        <next>
+          <block id="bb1250f2031649e5a059fc20faeb886a" type="lexical_variable_set">
             <field name="VAR">global current_answer</field>
             <value name="VALUE">
-              <block id="7ae277b6b95d4de78726b728c7f6fc90" type="lists_select_item">
-                <value name="LIST"><block id="54bc7047da754012be18c6924b35a51a" type="lexical_variable_get"><field name="VAR">q_pair</field></block></value>
-                <value name="NUM"><block id="bf907a4819fb4390be1db454cef9b965" type="math_number"><field name="NUM">2</field></block></value>
+              <block id="c5859305b65b41758b9f12fd3ba9c963" type="lists_select_item">
+                <value name="LIST"><block id="c6fabbb779f34cf3851d4fb395b4495e" type="lexical_variable_get"><field name="VAR">global current_q_pair</field></block></value>
+                <value name="NUM"><block id="c88573a3941f442a8aab0eb01e343528" type="math_number"><field name="NUM">2</field></block></value>
               </block>
             </value>
             <next>
-              <block id="66d6f1c69c7b4466b76e11e548e78abc" type="component_method">
+              <block id="14567e8ec90941ae890ff4fd11f07db3" type="component_method">
                 <mutation component_type="Notifier" method_name="ShowTextDialog" is_generic="false" instance_name="Notifier1"></mutation>
                 <field name="COMPONENT_SELECTOR">Notifier1</field>
                 <value name="ARG0">
-                  <block id="d54bf79dce79492fab74e40b1823f346" type="lists_select_item">
-                    <value name="LIST"><block id="267cac38e4f44f33a7ca2cecb0ba6e1e" type="lexical_variable_get"><field name="VAR">q_pair</field></block></value>
-                    <value name="NUM"><block id="b9b42153c34a4112bf8262bfdd9e64e9" type="math_number"><field name="NUM">1</field></block></value>
+                  <block id="c901ef1737fa4b44b86aa70982a00a09" type="lists_select_item">
+                    <value name="LIST"><block id="500202a479314ff8a18adb6c307b656c" type="lexical_variable_get"><field name="VAR">global current_q_pair</field></block></value>
+                    <value name="NUM"><block id="bd0f0abdf0ab4ad0a0f165ca988ba411" type="math_number"><field name="NUM">1</field></block></value>
                   </block>
                 </value>
-                <value name="ARG1"><block id="a3459ee0e2064965a760ff806b8fd802" type="text"><field name="TEXT">Knowledge Gate</field></block></value>
-                <value name="ARG2"><block id="adf12a38e90f47b58e91ef57fbf89402" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+                <value name="ARG1"><block id="e852da7bc3e5447798f4b8095da77f76" type="text"><field name="TEXT">Knowledge Gate</field></block></value>
+                <value name="ARG2"><block id="740827f63ff8491ea2f7616087d6ed1c" type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
               </block>
             </next>
           </block>
-        </statement>
+        </next>
       </block>
     </statement>
   </block>
 
-  <block id="c09fc706d42d4f82a6d93f8c5ca81e3a" type="component_event" x="-500" y="-700">
+  <block id="9ecde53869154d7fa68efd6bb6b738b3" type="component_event" x="-500" y="-700">
     <mutation component_type="Button" is_generic="false" instance_name="Btn1" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Btn1</field>
     <statement name="DO">
-      <block id="9c6e8aa06ff54af48ed120590cd6c824" type="controls_if">
+      <block id="e7c5fdc42ab24ed290984c58e00c0df5" type="controls_if">
         <value name="IF0">
-          <block id="d5d225720175408a89db1b23442ec9de" type="logic_compare">
+          <block id="bd1c9e61fe6148e08d3fd7ecf83ed6de" type="logic_compare">
             <field name="OP">EQ</field>
             <value name="A">
-              <block id="408398ecae384180a54f2a425d8a8cce" type="component_set_get">
+              <block id="8826efe3a850498d97da533d6e893670" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn1</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="19d5657e49ab4b4a805e840351117077" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="db0b494d9c1148ebb8fc0e53b2c16360" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="420853dcdb044f60afd6c645c2c6b06c" type="procedures_callnoreturn">
+          <block id="785886cf3ba041fbbed838a77232e5ea" type="procedures_callnoreturn">
             <mutation name="HandleMove"><arg name="btnId"></arg></mutation>
-            <value name="ARG0"><block id="82932f4828df4e14b15dda812136ea01" type="text"><field name="TEXT">Btn1</field></block></value>
+            <value name="ARG0"><block id="73f3d92e267a4b7b85509dbc7e6aa158" type="text"><field name="TEXT">Btn1</field></block></value>
           </block>
         </statement>
       </block>
     </statement>
   </block>
 
-  <block id="78a70952d1474cf0b6b672b95f6606a6" type="component_event" x="-500" y="-600">
+  <block id="aa09929b338142e49189d7fbb3056dc9" type="component_event" x="-500" y="-600">
     <mutation component_type="Button" is_generic="false" instance_name="Btn2" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Btn2</field>
     <statement name="DO">
-      <block id="1bbb7f8ef0f14b159647327e7ea6d74e" type="controls_if">
+      <block id="72af922bbbaf4895bee093f281f7fe09" type="controls_if">
         <value name="IF0">
-          <block id="e49ca115344a49c6b9a4705f8d87bd03" type="logic_compare">
+          <block id="1978f29bccf7480e9d0bfc2f50242b23" type="logic_compare">
             <field name="OP">EQ</field>
             <value name="A">
-              <block id="37b7e4ac63164533b6d3b01ef2d16cb4" type="component_set_get">
+              <block id="f7d1a34b3205475a98f9cd6531838844" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn2"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn2</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="d203167ba43740c7b6a72788637118fe" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="cf5721aa0241493787067928f1dcfd84" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="3abc09a6bf634c9b976f89aedc420398" type="procedures_callnoreturn">
+          <block id="fcd8c7442eac41569bb62cf3cba0dc48" type="procedures_callnoreturn">
             <mutation name="HandleMove"><arg name="btnId"></arg></mutation>
-            <value name="ARG0"><block id="8e6b696e5cad45a4af2c0a0ea3f7e2e1" type="text"><field name="TEXT">Btn2</field></block></value>
+            <value name="ARG0"><block id="12209a6a0b2740b6980a95fe09188dd6" type="text"><field name="TEXT">Btn2</field></block></value>
           </block>
         </statement>
       </block>
     </statement>
   </block>
 
-  <block id="9c0ebe00602c4efa9f6d67050709e8b1" type="component_event" x="-500" y="-500">
+  <block id="57b14acb0615424eb65c79db2d75c2e1" type="component_event" x="-500" y="-500">
     <mutation component_type="Button" is_generic="false" instance_name="Btn3" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Btn3</field>
     <statement name="DO">
-      <block id="83a4bca226534318b632080cf642d240" type="controls_if">
+      <block id="8a4304016a09428d8dff1c900761144d" type="controls_if">
         <value name="IF0">
-          <block id="98322f385a90447c9b9d75bf4c2dceb4" type="logic_compare">
+          <block id="6e5e534425a044768414317cf73efdb3" type="logic_compare">
             <field name="OP">EQ</field>
             <value name="A">
-              <block id="def340fdc65e4abfa73c104bbdb9f251" type="component_set_get">
+              <block id="5d42f9e6e8be46ecaba0e1d9fe2fb647" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn3</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="8df6159b3c9e49a498acd5b30ac68ed8" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="649af38fd3294b65a353d3262978738c" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="287544c91b3c497c8ab38e2dda87a037" type="procedures_callnoreturn">
+          <block id="6d58501ee05848d7857d723e5f7e3ba3" type="procedures_callnoreturn">
             <mutation name="HandleMove"><arg name="btnId"></arg></mutation>
-            <value name="ARG0"><block id="e53de8e0dfcb4c77b3697168f29e7e59" type="text"><field name="TEXT">Btn3</field></block></value>
+            <value name="ARG0"><block id="cdd6e0caa60542f78344195bf699e47f" type="text"><field name="TEXT">Btn3</field></block></value>
           </block>
         </statement>
       </block>
     </statement>
   </block>
 
-  <block id="eca7698886254eb480ee409483ea94b7" type="component_event" x="-500" y="-400">
+  <block id="d06067fc71c0446db32ce2b3a93b29fd" type="component_event" x="-500" y="-400">
     <mutation component_type="Button" is_generic="false" instance_name="Btn4" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Btn4</field>
     <statement name="DO">
-      <block id="3a8161bffdd3470b88d5ce3f8f59005e" type="controls_if">
+      <block id="d0627458fcd84aae9f557b24e2c95802" type="controls_if">
         <value name="IF0">
-          <block id="5923e21bcedd416f99ee040e37e93b6f" type="logic_compare">
+          <block id="a0b92edad0fb4795a0be93859af44493" type="logic_compare">
             <field name="OP">EQ</field>
             <value name="A">
-              <block id="d352d1165af34854bbe2d8de47d4f5c8" type="component_set_get">
+              <block id="450502739ad9483194d4c61a5f8b3fbe" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn4"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn4</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="60806ea1cee24c91a0df5a15da7d63d7" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="2eed94d3136a408f9e68d2806a3801d2" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="62eb94b665bf44f29415f9a9fd29701d" type="procedures_callnoreturn">
+          <block id="f4b230dcbffa4f1d8c759742f3212775" type="procedures_callnoreturn">
             <mutation name="HandleMove"><arg name="btnId"></arg></mutation>
-            <value name="ARG0"><block id="9efc16ddb65f4a0f9658e263f1e8baa7" type="text"><field name="TEXT">Btn4</field></block></value>
+            <value name="ARG0"><block id="8ca6f9cc9a904cd98ec8fe49339430a9" type="text"><field name="TEXT">Btn4</field></block></value>
           </block>
         </statement>
       </block>
     </statement>
   </block>
 
-  <block id="2098f12b067e4e17a76b64e2275ea2b3" type="component_event" x="-500" y="-300">
+  <block id="504d9c6347ce4737b4e6e820c2303c10" type="component_event" x="-500" y="-300">
     <mutation component_type="Button" is_generic="false" instance_name="Btn5" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Btn5</field>
     <statement name="DO">
-      <block id="3dbef8dfcab24823b0c964c32e659216" type="controls_if">
+      <block id="4215bb0788d64cc29a5e26ed29de84f5" type="controls_if">
         <value name="IF0">
-          <block id="427fba4de1a442c9b28383975ce858a5" type="logic_compare">
+          <block id="c00e9fc092434a1a97cf026924f0c71f" type="logic_compare">
             <field name="OP">EQ</field>
             <value name="A">
-              <block id="10a69696a02f409487f871462d9a1ba6" type="component_set_get">
+              <block id="a3cb977051f44be3ad49d03b4dc8a97c" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn5</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="bf284d05b365413ebe72cfbfe772194f" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="54a87b13bae843cba45299bd9b3b89c8" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="86812aec80164ceaa53d1c16ecc20565" type="procedures_callnoreturn">
+          <block id="c2e23236becc40a3b863f98c73d62234" type="procedures_callnoreturn">
             <mutation name="HandleMove"><arg name="btnId"></arg></mutation>
-            <value name="ARG0"><block id="78567587bea44c17bb0afe947e2b13f8" type="text"><field name="TEXT">Btn5</field></block></value>
+            <value name="ARG0"><block id="b5eb9b310cd04261bcbd714c44ae779d" type="text"><field name="TEXT">Btn5</field></block></value>
           </block>
         </statement>
       </block>
     </statement>
   </block>
 
-  <block id="46ec698b1f854482b567684c8ac37456" type="component_event" x="-500" y="-200">
+  <block id="d6bfde2573144865aac0ae6e0fab9f3a" type="component_event" x="-500" y="-200">
     <mutation component_type="Button" is_generic="false" instance_name="Btn6" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Btn6</field>
     <statement name="DO">
-      <block id="896ae69d2c964a9d8fa936bf00f0139e" type="controls_if">
+      <block id="f7582de8a9ab4a44ac69e927097c47ac" type="controls_if">
         <value name="IF0">
-          <block id="ff58fbf7a44946ec9ba5800afdc47e51" type="logic_compare">
+          <block id="ab82661e1df349d6a59056161886c672" type="logic_compare">
             <field name="OP">EQ</field>
             <value name="A">
-              <block id="31babffb44454a7392825a6ba6980971" type="component_set_get">
+              <block id="e7904aa8f15a425cb19e70914c83a052" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn6"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn6</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="5fcefa3cb7fe48ae858906dd167a4a8c" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="2af76fa94bde4bae8088b173b7566c70" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="c197d1524e0b4325ad7e40534fbf1d57" type="procedures_callnoreturn">
+          <block id="0f9110c69fe744caafc81e33d30b486a" type="procedures_callnoreturn">
             <mutation name="HandleMove"><arg name="btnId"></arg></mutation>
-            <value name="ARG0"><block id="4505654a01cf443294c24b21073741f5" type="text"><field name="TEXT">Btn6</field></block></value>
+            <value name="ARG0"><block id="f50e9fb2bdf64bf6b4eee618920f9a76" type="text"><field name="TEXT">Btn6</field></block></value>
           </block>
         </statement>
       </block>
     </statement>
   </block>
 
-  <block id="6ffa8a7f2d974931a0c38ec888519a70" type="component_event" x="-500" y="-100">
+  <block id="076fa4e92c1a4f3ba73bbdeea13a5f5b" type="component_event" x="-500" y="-100">
     <mutation component_type="Button" is_generic="false" instance_name="Btn7" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Btn7</field>
     <statement name="DO">
-      <block id="db9ff05f2fea4fe9a062b110ae3ad1e8" type="controls_if">
+      <block id="e82ed5a358ec46528226c7f1bf615811" type="controls_if">
         <value name="IF0">
-          <block id="54d2e2b0c9aa4527b45a77c6cd7affbb" type="logic_compare">
+          <block id="f644fcd3ce054803927ce25d2d5ca28f" type="logic_compare">
             <field name="OP">EQ</field>
             <value name="A">
-              <block id="b538b17aa8e145f3a74323ddd4c0c2c7" type="component_set_get">
+              <block id="ae1c0c37fc214416bc7394423b73e825" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn7"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn7</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="e72dbd8aa85b4ce2ac556b6391df39a8" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="372878d87eaa4864b606dbe5ea735c02" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="9240538bf48445798619fd1bd88ccb47" type="procedures_callnoreturn">
+          <block id="bfea853de35f463b8d968ae1889a50d4" type="procedures_callnoreturn">
             <mutation name="HandleMove"><arg name="btnId"></arg></mutation>
-            <value name="ARG0"><block id="e39d251076774d49a198e420d2c0d460" type="text"><field name="TEXT">Btn7</field></block></value>
+            <value name="ARG0"><block id="17891f0f86914473815d68aa7714110d" type="text"><field name="TEXT">Btn7</field></block></value>
           </block>
         </statement>
       </block>
     </statement>
   </block>
 
-  <block id="3784d9e180ea40f9bf8885daf0bddd17" type="component_event" x="-500" y="0">
+  <block id="c48c2d1c46bf4c2a809aaed47a289661" type="component_event" x="-500" y="0">
     <mutation component_type="Button" is_generic="false" instance_name="Btn8" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Btn8</field>
     <statement name="DO">
-      <block id="4a5d8bf617f843fc8537ec53fe7244a2" type="controls_if">
+      <block id="0ecb332aca1f4c51913b21de0cf57cdd" type="controls_if">
         <value name="IF0">
-          <block id="dc414f911cce42eabbce5889f0c70146" type="logic_compare">
+          <block id="eeca5515791846ee81bcb1ecc3cd900b" type="logic_compare">
             <field name="OP">EQ</field>
             <value name="A">
-              <block id="ffd58acd40184007bb8708dd72668d33" type="component_set_get">
+              <block id="765f71bf6c4344b980eb8b9becf5fab8" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn8"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn8</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="7180ff20656c4989a8b91a8f773fe44d" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="bba23c19592c40caabc855f48e1664b0" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="f6bbd580795d4b7cbae3d1cee0cb7964" type="procedures_callnoreturn">
+          <block id="f18ec5e542f04f31ab39d6b8e7dc9c56" type="procedures_callnoreturn">
             <mutation name="HandleMove"><arg name="btnId"></arg></mutation>
-            <value name="ARG0"><block id="989c5b6a82074b3698c404548d1d3cba" type="text"><field name="TEXT">Btn8</field></block></value>
+            <value name="ARG0"><block id="5e062ed8ecfd4e97bb70c71a4539582b" type="text"><field name="TEXT">Btn8</field></block></value>
           </block>
         </statement>
       </block>
     </statement>
   </block>
 
-  <block id="c2e3085aa4d243c1b7648abc8849df92" type="component_event" x="-500" y="100">
+  <block id="f63c79c91c45475b9da6f995f13649da" type="component_event" x="-500" y="100">
     <mutation component_type="Button" is_generic="false" instance_name="Btn9" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">Btn9</field>
     <statement name="DO">
-      <block id="5272d4dc443f4f26b90f18d0b84ae5a0" type="controls_if">
+      <block id="007a733d80e34cf8b5b819e35a31559f" type="controls_if">
         <value name="IF0">
-          <block id="f0482ab2565d451b91768ac7916c174a" type="logic_compare">
+          <block id="186a354a54a9483a9661e22ec6e5ac9f" type="logic_compare">
             <field name="OP">EQ</field>
             <value name="A">
-              <block id="dc33570a466f462983cdb2803b0a344e" type="component_set_get">
+              <block id="52808f9e816e406bb2316d9fc06660e4" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn9"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn9</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="9dd0820ef0b64dddb269d4ce82e96aa8" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="33a4c13e7e1549d7b14b7fca7fbc5100" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="f85fd2f1736e4d86b62a597d8d76d721" type="procedures_callnoreturn">
+          <block id="15667a93c8a24ff5aec2e45e19e3a8e8" type="procedures_callnoreturn">
             <mutation name="HandleMove"><arg name="btnId"></arg></mutation>
-            <value name="ARG0"><block id="5305b129c91e4713bc996f32611a10d8" type="text"><field name="TEXT">Btn9</field></block></value>
+            <value name="ARG0"><block id="f60df8355a5b4916a1a7de9935c245a7" type="text"><field name="TEXT">Btn9</field></block></value>
           </block>
         </statement>
       </block>
     </statement>
   </block>
 
-  <block id="0a1c391d70c648ca8080de16ba05bdfe" type="procedures_defnoreturn" x="1000" y="-400">
+  <block id="7c675709ec644316947f37f25cc2dd13" type="procedures_defnoreturn" x="1000" y="-400">
     <field name="NAME">CheckWin</field>
     <statement name="STACK">
 
-      <block id="af2e1aa202724f97acdc1c14efe299ce" type="controls_if">
+      <block id="d194dac3d27748db9d4be45293a5f6f8" type="controls_if">
         <value name="IF0">
-          <block id="496b153e2b6744669700f8721ee19af4" type="logic_compare">
+          <block id="cec2005111144015a23b1418f7f8122b" type="logic_compare">
             <field name="OP">NEQ</field>
             <value name="A">
-              <block id="7b318634ab05437186d82ac93b4cd232" type="component_set_get">
+              <block id="63b2c9a3a4cc4570860a6b2171a70728" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn1</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="13daa53c1f804d9493bde4f540adafdb" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="126e0156d84d4e2491f5634f47f8f73f" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="ad770abe1c464c769bb0dc9de72784c7" type="controls_if">
+          <block id="c4b17714f2884d9ea0e7c56afb86716a" type="controls_if">
             <value name="IF0">
-              <block id="086fc8c8d9934c5590b1eb7ced42eba5" type="logic_compare">
+              <block id="f5a9a320f1b449668c36fb95f184dedf" type="logic_compare">
                 <field name="OP">EQ</field>
                 <value name="A">
-                  <block id="3caebef32b1f4e37a6125d026390ed61" type="component_set_get">
+                  <block id="c895684ab3a64046aa9630984e9f903c" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn1</field>
                     <field name="PROP">Text</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block id="3931f50d77f444c3a5cf6df731a58bc3" type="component_set_get">
+                  <block id="40905c98363a4eb892b2053277b4717d" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn2"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn2</field>
                     <field name="PROP">Text</field>
@@ -610,19 +909,19 @@
               </block>
             </value>
             <statement name="DO0">
-              <block id="135b8e0f9ab140789dc35bb344a99d8c" type="controls_if">
+              <block id="9cb948d31fd546ee83379bb5d71d0e6f" type="controls_if">
                 <value name="IF0">
-                  <block id="996011e17a844462a01ced7573be6f7b" type="logic_compare">
+                  <block id="c0a2da00069a4dd88d404162eccfec86" type="logic_compare">
                     <field name="OP">EQ</field>
                     <value name="A">
-                      <block id="cdf82480820a4ff295f13e8e817b484b" type="component_set_get">
+                      <block id="7984ded0274049a38b95ea39491c4e39" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn2"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn2</field>
                         <field name="PROP">Text</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block id="a931eb26420a442d98f4449ac64fe40d" type="component_set_get">
+                      <block id="aa89422ed92d4337b7cc7b1170bb7527" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn3</field>
                         <field name="PROP">Text</field>
@@ -631,15 +930,15 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block id="8c05f24b55f143cb86b52ef621c54eb0" type="component_method">
-                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                  <block id="097d5ce29538478cb3a6231edc1d2d14" type="component_method">
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
                     <field name="COMPONENT_SELECTOR">Notifier1</field>
                     <value name="ARG0">
-                      <block id="b5bded2aa1bc4a1ab4b5e6716bca73e3" type="text_join">
+                      <block id="29f72a49d6d44921affefd06621e931a" type="text_join">
                         <mutation items="2"></mutation>
-                        <value name="ADD0"><block id="45676cdc6147433884fef382d8e1ecc2" type="text"><field name="TEXT">Winner: </field></block></value>
+                        <value name="ADD0"><block id="c274d689a9c84695b518956751d2ceb1" type="text"><field name="TEXT">Winner: </field></block></value>
                         <value name="ADD1">
-                          <block id="763904290984405ebc077f62598cc182" type="component_set_get">
+                          <block id="a61adeb664ca4e50826380705ca669fb" type="component_set_get">
                             <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
                             <field name="COMPONENT_SELECTOR">Btn1</field>
                             <field name="PROP">Text</field>
@@ -647,8 +946,10 @@
                         </value>
                       </block>
                     </value>
+                    <value name="ARG1"><block id="bafd051e6de549a99ac28e1969a39690" type="text"><field name="TEXT">Game Over!</field></block></value>
+                    <value name="ARG2"><block id="e87317fd949b45f1a15fb8f6f99c6a2c" type="text"><field name="TEXT">OK</field></block></value>
                     <next>
-                      <block id="26718021276640929ad194eb865b06d3" type="procedures_callnoreturn">
+                      <block id="9a4066667bd8439f9bb58dcddffa0245" type="procedures_callnoreturn">
                         <mutation name="ResetGame"></mutation>
                       </block>
                     </next>
@@ -660,34 +961,34 @@
         </statement>
         <next>
 
-      <block id="7188f55585a241d7916f8f8dce75dfc3" type="controls_if">
+      <block id="3e5829261a91475197259206576b1dab" type="controls_if">
         <value name="IF0">
-          <block id="367f92a1fe4a43a9809c39516442810d" type="logic_compare">
+          <block id="ce806e40303241709032a43245e69d14" type="logic_compare">
             <field name="OP">NEQ</field>
             <value name="A">
-              <block id="1f16d9936ad54508b5e79f96d2f50226" type="component_set_get">
+              <block id="879012bdbc914060bb5edb112af8aa0e" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn4"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn4</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="a64937ba6c7c4470aea5f5e005f4c812" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="1549d7222922456893205f8fe5f771e5" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="3ff50a49c167429e927f9f11ab8325c4" type="controls_if">
+          <block id="3a5255c5989c403280c7d73e8c607b1e" type="controls_if">
             <value name="IF0">
-              <block id="aa151da1d24f47259b2b831f22a583a3" type="logic_compare">
+              <block id="d2998f03a8fc4fceb9a8a7426fce9440" type="logic_compare">
                 <field name="OP">EQ</field>
                 <value name="A">
-                  <block id="c3fe50b813244dcbb1cc20be642f206b" type="component_set_get">
+                  <block id="5ea2f7f5ff7f4bc68eb24f49cce48e3f" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn4"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn4</field>
                     <field name="PROP">Text</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block id="fb66cdba09fc4f7da24d2fca063238a9" type="component_set_get">
+                  <block id="52abac882c80471b8aac9aff5ebc201f" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn5</field>
                     <field name="PROP">Text</field>
@@ -696,19 +997,19 @@
               </block>
             </value>
             <statement name="DO0">
-              <block id="f13714f66c714bb5a88a7fdba950b523" type="controls_if">
+              <block id="d917fbf8b7894217a8d0e08c08d63483" type="controls_if">
                 <value name="IF0">
-                  <block id="40cf0f88279f41deb57ec7f2ac769987" type="logic_compare">
+                  <block id="487d1656a22944139ad6adcab41136b8" type="logic_compare">
                     <field name="OP">EQ</field>
                     <value name="A">
-                      <block id="50b8cd5bfc504bdea659262e61a8fa5d" type="component_set_get">
+                      <block id="887b76012d9f46c1a50a1d8d89f3b299" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn5</field>
                         <field name="PROP">Text</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block id="2d0e8ec7c3f74850ba7a29e1f629d1c1" type="component_set_get">
+                      <block id="82af19d38d214cf7a5bbba68c06359ed" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn6"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn6</field>
                         <field name="PROP">Text</field>
@@ -717,15 +1018,15 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block id="4e6961e9373c47bd84d00a037f497c79" type="component_method">
-                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                  <block id="b9f17c486615494495d6cfb843ea9652" type="component_method">
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
                     <field name="COMPONENT_SELECTOR">Notifier1</field>
                     <value name="ARG0">
-                      <block id="5c5f43f06aea48efa3bccfc1d678f06b" type="text_join">
+                      <block id="7763e06143834f68bcf42e3e8a369a9a" type="text_join">
                         <mutation items="2"></mutation>
-                        <value name="ADD0"><block id="86c91dc429a948db82418b0cae5c096d" type="text"><field name="TEXT">Winner: </field></block></value>
+                        <value name="ADD0"><block id="f127054759784df89a0e9f0b4aa829d2" type="text"><field name="TEXT">Winner: </field></block></value>
                         <value name="ADD1">
-                          <block id="31502e9b1d9a4ccd8dab9a5b4d084999" type="component_set_get">
+                          <block id="01d08453d87940c18de75e0c14ca6ba0" type="component_set_get">
                             <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn4"></mutation>
                             <field name="COMPONENT_SELECTOR">Btn4</field>
                             <field name="PROP">Text</field>
@@ -733,8 +1034,10 @@
                         </value>
                       </block>
                     </value>
+                    <value name="ARG1"><block id="2d7c35f14b5f4873b0f7156201a19637" type="text"><field name="TEXT">Game Over!</field></block></value>
+                    <value name="ARG2"><block id="06d2038ef5fb4998bdeeec3d017c6961" type="text"><field name="TEXT">OK</field></block></value>
                     <next>
-                      <block id="92aa4b94bdfc4201b9cd3e0761120352" type="procedures_callnoreturn">
+                      <block id="66b7e6b36c5a4d08831653ac36eb71c0" type="procedures_callnoreturn">
                         <mutation name="ResetGame"></mutation>
                       </block>
                     </next>
@@ -746,34 +1049,34 @@
         </statement>
         <next>
 
-      <block id="857c80e3284d45d19fc417c1f8845fca" type="controls_if">
+      <block id="854a68b2979241dfab7bfd6473823169" type="controls_if">
         <value name="IF0">
-          <block id="724741704a394d18a757fd9fa80feb52" type="logic_compare">
+          <block id="102c471d565e4935bab6fedf1907d141" type="logic_compare">
             <field name="OP">NEQ</field>
             <value name="A">
-              <block id="757b5416fbbb4e78aab7c1eec588e0ba" type="component_set_get">
+              <block id="e8b0ae7010454a73ac7c038aa211d23e" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn7"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn7</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="5132c8d18a7d41b6b5a7221545b19ea6" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="0cccc01e21664c6aa66c130bb7b79d9f" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="cbe1c3a221f843ae88e99eae4156b770" type="controls_if">
+          <block id="14186c1d4725420ca8383a2c19431e14" type="controls_if">
             <value name="IF0">
-              <block id="ec029eb1c7964edf84644ae035217b5a" type="logic_compare">
+              <block id="5c9cfa4b4c454a4bb96b5770fae3c7ac" type="logic_compare">
                 <field name="OP">EQ</field>
                 <value name="A">
-                  <block id="61591dcbca2241bc83509f8d8209c8ba" type="component_set_get">
+                  <block id="824f7287c5f6464892f1b2f7ce6ddfff" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn7"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn7</field>
                     <field name="PROP">Text</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block id="1064be22315c46e9858e055d95879187" type="component_set_get">
+                  <block id="333a1bff858c41d591822d5bdcb45b77" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn8"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn8</field>
                     <field name="PROP">Text</field>
@@ -782,19 +1085,19 @@
               </block>
             </value>
             <statement name="DO0">
-              <block id="fc358e83cd054289ba202d8766b24efe" type="controls_if">
+              <block id="d052fc2a72d447368238a75ba48a505f" type="controls_if">
                 <value name="IF0">
-                  <block id="60d97cd83d144ababd673d9509424420" type="logic_compare">
+                  <block id="e51f8582feef4769956eb83b331ebc4d" type="logic_compare">
                     <field name="OP">EQ</field>
                     <value name="A">
-                      <block id="0193097d2c9e4028a139b08de8809d34" type="component_set_get">
+                      <block id="6b054049323846f09a9daf401f36a823" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn8"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn8</field>
                         <field name="PROP">Text</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block id="8f3a8b0da1c94b829755f084c264632f" type="component_set_get">
+                      <block id="ec9f3dd30bf142be88c52408100dc4bf" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn9"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn9</field>
                         <field name="PROP">Text</field>
@@ -803,15 +1106,15 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block id="f3c9e7ac53c54d499d02a973ee3356de" type="component_method">
-                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                  <block id="0a7364315ab2469c9441c5e8a1d50184" type="component_method">
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
                     <field name="COMPONENT_SELECTOR">Notifier1</field>
                     <value name="ARG0">
-                      <block id="28fd7e0fc7dd4178ae9f2f6625421a16" type="text_join">
+                      <block id="811372ffa06e454a922fd471da394e81" type="text_join">
                         <mutation items="2"></mutation>
-                        <value name="ADD0"><block id="d393ce59998e45a49eab37ff0bc3e555" type="text"><field name="TEXT">Winner: </field></block></value>
+                        <value name="ADD0"><block id="5ccea931835644058fb2ef458f60ba3b" type="text"><field name="TEXT">Winner: </field></block></value>
                         <value name="ADD1">
-                          <block id="49d6387cc4ab4c7cad57370a87c0d388" type="component_set_get">
+                          <block id="7a09fb3bc2ca40efbbbba7dd4b878586" type="component_set_get">
                             <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn7"></mutation>
                             <field name="COMPONENT_SELECTOR">Btn7</field>
                             <field name="PROP">Text</field>
@@ -819,8 +1122,10 @@
                         </value>
                       </block>
                     </value>
+                    <value name="ARG1"><block id="e0ab0caf31e74b58a3419d291c3c8f5e" type="text"><field name="TEXT">Game Over!</field></block></value>
+                    <value name="ARG2"><block id="664363710e0f4cba88962e801190a718" type="text"><field name="TEXT">OK</field></block></value>
                     <next>
-                      <block id="5d68ed9404b046638610e7bae4604acd" type="procedures_callnoreturn">
+                      <block id="db0b7f1cfccd4fb791e2aee316185f5a" type="procedures_callnoreturn">
                         <mutation name="ResetGame"></mutation>
                       </block>
                     </next>
@@ -832,34 +1137,34 @@
         </statement>
         <next>
 
-      <block id="5b713c1afba04cf1aad21adc797f5959" type="controls_if">
+      <block id="941b6e9a68cd422393c27830bcbb4e84" type="controls_if">
         <value name="IF0">
-          <block id="0ca66587054844ebb3e8973aa2f23cea" type="logic_compare">
+          <block id="75b1cedf6973417197e11ae0352d139e" type="logic_compare">
             <field name="OP">NEQ</field>
             <value name="A">
-              <block id="2d303542afae48aba6fa26fffd0ccac2" type="component_set_get">
+              <block id="00703f3ed7354eee8c1b68d2069e49e3" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn1</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="2a94438faa8943eabb27c356391e3ca4" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="68545d7f478c44e8a01fa99b355a72ba" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="4a4c154dead449a6a93ee8b084637df8" type="controls_if">
+          <block id="d5c19b370c824623983f582b1931c904" type="controls_if">
             <value name="IF0">
-              <block id="6c9189b3c0914b16902b836c669d3f5c" type="logic_compare">
+              <block id="4f5173ccf53d4a6987bcb45a0f3ff1bf" type="logic_compare">
                 <field name="OP">EQ</field>
                 <value name="A">
-                  <block id="5592534f385e4f859c5dcc29c4000b5a" type="component_set_get">
+                  <block id="34973b04671e48c9b564fd844668ef76" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn1</field>
                     <field name="PROP">Text</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block id="85c4dfd500504c569409f790d2e28131" type="component_set_get">
+                  <block id="bdbbfeefa2fb4b77bc56747cab9e0a7f" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn4"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn4</field>
                     <field name="PROP">Text</field>
@@ -868,19 +1173,19 @@
               </block>
             </value>
             <statement name="DO0">
-              <block id="d84d93e5bea24ad8a5d9c712d12bda31" type="controls_if">
+              <block id="aff1b3e74da54eb1983282d9fd089084" type="controls_if">
                 <value name="IF0">
-                  <block id="286f803e399949a2908e5bed38e4643a" type="logic_compare">
+                  <block id="4570ed70154946db9571c78876dae07e" type="logic_compare">
                     <field name="OP">EQ</field>
                     <value name="A">
-                      <block id="3d0240f99e9e487b9bce81af51c8fd3f" type="component_set_get">
+                      <block id="18a740329386402b86ae657e99c088e6" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn4"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn4</field>
                         <field name="PROP">Text</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block id="1e3b97eb0bb74e10807e63fee188c03d" type="component_set_get">
+                      <block id="e213f76f8e884490afdfc85331f0c0eb" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn7"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn7</field>
                         <field name="PROP">Text</field>
@@ -889,15 +1194,15 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block id="fd85818c822847e4a1e97624c8f14f74" type="component_method">
-                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                  <block id="eda108766c7e4c82b157c82221b5be2c" type="component_method">
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
                     <field name="COMPONENT_SELECTOR">Notifier1</field>
                     <value name="ARG0">
-                      <block id="a83142756d98438bbefbb2157f0ef45e" type="text_join">
+                      <block id="77ceed6199e3484f9e7ec687cc96dd3a" type="text_join">
                         <mutation items="2"></mutation>
-                        <value name="ADD0"><block id="a8ef17ea73b94ab3a34f07dd610f7e6a" type="text"><field name="TEXT">Winner: </field></block></value>
+                        <value name="ADD0"><block id="21a14d3c8855451aae5a5a73ffc5752c" type="text"><field name="TEXT">Winner: </field></block></value>
                         <value name="ADD1">
-                          <block id="15c0a4366ed74082a96291c7a5d8e3d7" type="component_set_get">
+                          <block id="3f737c83738344d2ba1c0673bec2d4b3" type="component_set_get">
                             <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
                             <field name="COMPONENT_SELECTOR">Btn1</field>
                             <field name="PROP">Text</field>
@@ -905,8 +1210,10 @@
                         </value>
                       </block>
                     </value>
+                    <value name="ARG1"><block id="54229c57f2524c9796ba8f46ae0ce265" type="text"><field name="TEXT">Game Over!</field></block></value>
+                    <value name="ARG2"><block id="67066f3c517c421bb9b0e1dd39e524c9" type="text"><field name="TEXT">OK</field></block></value>
                     <next>
-                      <block id="9692f232f2e946649f242ee51b14fb6c" type="procedures_callnoreturn">
+                      <block id="152c8172e3c241038fdc7aee72d662dc" type="procedures_callnoreturn">
                         <mutation name="ResetGame"></mutation>
                       </block>
                     </next>
@@ -918,34 +1225,34 @@
         </statement>
         <next>
 
-      <block id="acb75080bdbd428681b13fcf03100834" type="controls_if">
+      <block id="e5998e490e114f3db7234013ff54cc38" type="controls_if">
         <value name="IF0">
-          <block id="9eadc20887264770b467870012f7d708" type="logic_compare">
+          <block id="915160363e9a4ba5bcd2e5693fcb7701" type="logic_compare">
             <field name="OP">NEQ</field>
             <value name="A">
-              <block id="ae51119f3e2447429f38c90cbee98d53" type="component_set_get">
+              <block id="24fa884b74e4420eb135cebf8c5d5e82" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn2"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn2</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="b512a942872747a4854855f110b70ce0" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="8ff57695680a413883f94603dc87d6ee" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="86b938404f9d4178bca07b17cef57577" type="controls_if">
+          <block id="189cc833862941d88f5267d3e7834ce0" type="controls_if">
             <value name="IF0">
-              <block id="46327ee0a5194159b9536394c73e4b7e" type="logic_compare">
+              <block id="13608f0059ee4aed83c4e6a0112ab5ba" type="logic_compare">
                 <field name="OP">EQ</field>
                 <value name="A">
-                  <block id="7a0fcfcea9844fba8d95aabf465cbe40" type="component_set_get">
+                  <block id="82c8e7e6b9314b39ae79338a310dbf90" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn2"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn2</field>
                     <field name="PROP">Text</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block id="d754a89e574c46debfef882dbfc81e73" type="component_set_get">
+                  <block id="5f940a56be064cc2ba2e524f6be38606" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn5</field>
                     <field name="PROP">Text</field>
@@ -954,19 +1261,19 @@
               </block>
             </value>
             <statement name="DO0">
-              <block id="1293d6fb165a48f7aa4b12da49681a52" type="controls_if">
+              <block id="2fdefe49c42a4f778a21b79f07d265a7" type="controls_if">
                 <value name="IF0">
-                  <block id="ae1ccbee974d42d18d95e07f81e2e08b" type="logic_compare">
+                  <block id="22b6fa87db5b4c3d875b91917fff2161" type="logic_compare">
                     <field name="OP">EQ</field>
                     <value name="A">
-                      <block id="3e4a618c97f84a49846077b2a7befacc" type="component_set_get">
+                      <block id="d14b67f0b32b425b852ec4c4bcef2fb7" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn5</field>
                         <field name="PROP">Text</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block id="8f8a272ae49d4eada0eb8455109f80bf" type="component_set_get">
+                      <block id="eba945a3e2f54e17ba94be5de8263836" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn8"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn8</field>
                         <field name="PROP">Text</field>
@@ -975,15 +1282,15 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block id="7533097b130c47169935ce93d443fb34" type="component_method">
-                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                  <block id="ab2042dbbab14490a1b9f3e87a119ed6" type="component_method">
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
                     <field name="COMPONENT_SELECTOR">Notifier1</field>
                     <value name="ARG0">
-                      <block id="d79adb5683ad46ba907be6d1c3f6f839" type="text_join">
+                      <block id="f66d687f4b3d4c7fb3452cf3e032567a" type="text_join">
                         <mutation items="2"></mutation>
-                        <value name="ADD0"><block id="2d152eb41e2f477883e2258b6defb8db" type="text"><field name="TEXT">Winner: </field></block></value>
+                        <value name="ADD0"><block id="b687cf8fe78848f29a7f09686cf47e68" type="text"><field name="TEXT">Winner: </field></block></value>
                         <value name="ADD1">
-                          <block id="95f351781a14485aaf8f388f8f613495" type="component_set_get">
+                          <block id="68fd0b3298634516b7dd5026593e02ea" type="component_set_get">
                             <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn2"></mutation>
                             <field name="COMPONENT_SELECTOR">Btn2</field>
                             <field name="PROP">Text</field>
@@ -991,8 +1298,10 @@
                         </value>
                       </block>
                     </value>
+                    <value name="ARG1"><block id="21c715e8a02b44d38c6e5b52e1848f1e" type="text"><field name="TEXT">Game Over!</field></block></value>
+                    <value name="ARG2"><block id="43d50b97fba0461db3e9643f333ce802" type="text"><field name="TEXT">OK</field></block></value>
                     <next>
-                      <block id="96c9668f29aa4bbc9d59acf2d4f657cc" type="procedures_callnoreturn">
+                      <block id="ea94e81db9ba40809e84e201e961c333" type="procedures_callnoreturn">
                         <mutation name="ResetGame"></mutation>
                       </block>
                     </next>
@@ -1004,34 +1313,34 @@
         </statement>
         <next>
 
-      <block id="de5bb454ae924d6f9bae141948f5fff0" type="controls_if">
+      <block id="234108239b2a48ee98652a9945d35453" type="controls_if">
         <value name="IF0">
-          <block id="28f1447221884d5894050aa7844d517a" type="logic_compare">
+          <block id="37e546fc4ae14af1819d0b1ed5bae286" type="logic_compare">
             <field name="OP">NEQ</field>
             <value name="A">
-              <block id="bd63eb3825874493988fe97f9966a09a" type="component_set_get">
+              <block id="bd6e81c499084147b9e1fd95834a13e7" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn3</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="6e455b83bd8d48d2bf8a7de1e29a7d62" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="ed200fe540d74d3087c4f001d5fbb297" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="c0ca546f217e42519c387fba37b23873" type="controls_if">
+          <block id="4ce35bc76a944cfcb98aaf17356e32ce" type="controls_if">
             <value name="IF0">
-              <block id="9e606ad3af1c415ba81db48165f892d3" type="logic_compare">
+              <block id="ed2f6985ea58485c9261a393c27e7e14" type="logic_compare">
                 <field name="OP">EQ</field>
                 <value name="A">
-                  <block id="4ed1e19e9fc74f669f2ea1b49f991677" type="component_set_get">
+                  <block id="de06d7fdce864b67a5e5b90edf6699be" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn3</field>
                     <field name="PROP">Text</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block id="8e229325312d47119b2183dd02482b1a" type="component_set_get">
+                  <block id="695e29625df44bcabc541abe69f0120f" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn6"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn6</field>
                     <field name="PROP">Text</field>
@@ -1040,19 +1349,19 @@
               </block>
             </value>
             <statement name="DO0">
-              <block id="bd045fcc306d4694b7888a5ee8ab8b75" type="controls_if">
+              <block id="75d527aea0db4e6a926e2289a5abca5c" type="controls_if">
                 <value name="IF0">
-                  <block id="c794f76dd8b943be862ae75d31620d4b" type="logic_compare">
+                  <block id="577bfd840ee54ee1b7f202037074f7d5" type="logic_compare">
                     <field name="OP">EQ</field>
                     <value name="A">
-                      <block id="5e36deca0c954bfa9dad123050f084c3" type="component_set_get">
+                      <block id="6deac50d6d9c4c49ad7039aade9adb96" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn6"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn6</field>
                         <field name="PROP">Text</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block id="d4b2789a6743461fa4ed0d5b8496db01" type="component_set_get">
+                      <block id="da7195cdc9fe4757b406cc835bed7411" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn9"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn9</field>
                         <field name="PROP">Text</field>
@@ -1061,15 +1370,15 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block id="804cd7ce724449b18d701a0d3765a391" type="component_method">
-                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                  <block id="3fc389dd32544fad9deb88c82632abeb" type="component_method">
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
                     <field name="COMPONENT_SELECTOR">Notifier1</field>
                     <value name="ARG0">
-                      <block id="b89e3eff57994e1a85e14fc626ff9345" type="text_join">
+                      <block id="b15b249d82f944b1a2f27b73171648f1" type="text_join">
                         <mutation items="2"></mutation>
-                        <value name="ADD0"><block id="0cae636dec924698b8585d80cbb037d8" type="text"><field name="TEXT">Winner: </field></block></value>
+                        <value name="ADD0"><block id="9f7bae1bbf444ad5b189cbdf915054a1" type="text"><field name="TEXT">Winner: </field></block></value>
                         <value name="ADD1">
-                          <block id="7262fcd6eea648fcb70a51db6d51caa0" type="component_set_get">
+                          <block id="8d663284e9834945914d658f4d7e3a4e" type="component_set_get">
                             <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
                             <field name="COMPONENT_SELECTOR">Btn3</field>
                             <field name="PROP">Text</field>
@@ -1077,8 +1386,10 @@
                         </value>
                       </block>
                     </value>
+                    <value name="ARG1"><block id="846423fe7eff43f8962cb90e3eacf971" type="text"><field name="TEXT">Game Over!</field></block></value>
+                    <value name="ARG2"><block id="a2cf4a2a0d3f482fbf1f9987c2a6af8c" type="text"><field name="TEXT">OK</field></block></value>
                     <next>
-                      <block id="da7f6073ca4a494498ca305eea2c99e0" type="procedures_callnoreturn">
+                      <block id="a1f2dd9de2f1441daaad47d39e0c5ec2" type="procedures_callnoreturn">
                         <mutation name="ResetGame"></mutation>
                       </block>
                     </next>
@@ -1090,34 +1401,34 @@
         </statement>
         <next>
 
-      <block id="d60902553d1f4b8e99ff1fbc4bc3095d" type="controls_if">
+      <block id="2898b599e6cb478c85b84efa7b8ac03f" type="controls_if">
         <value name="IF0">
-          <block id="7e41cc29d2bd4e9084a2caed43f6f6f5" type="logic_compare">
+          <block id="7b5d83f9ba3643eeab9e2bcc32107f7b" type="logic_compare">
             <field name="OP">NEQ</field>
             <value name="A">
-              <block id="e61b9d1611f44cfcb2044be64b8cc4ac" type="component_set_get">
+              <block id="e96827a6dc134921a36c191a9656af68" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn1</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="69802bab53cc4da4a20f6243ed178d4a" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="08b6b1440a49438faa5e0dfa5e0ffbe9" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="0573244b720d400da715b2ff15ef77ea" type="controls_if">
+          <block id="dd4ba3ec2c4e4a0495b73ae4f0be3428" type="controls_if">
             <value name="IF0">
-              <block id="d4e70e6cc54a4a9aa6050cbfd7a287e8" type="logic_compare">
+              <block id="a62ea8c9903f483d9863c3db26f61ebe" type="logic_compare">
                 <field name="OP">EQ</field>
                 <value name="A">
-                  <block id="e358593e15904f13b4bd8d33cc13c896" type="component_set_get">
+                  <block id="032381a6feb0421d87037528230856b5" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn1</field>
                     <field name="PROP">Text</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block id="971501138ea7445eb6b444ea3f254691" type="component_set_get">
+                  <block id="cb49785981704e9eb5c90f605900a9b2" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn5</field>
                     <field name="PROP">Text</field>
@@ -1126,19 +1437,19 @@
               </block>
             </value>
             <statement name="DO0">
-              <block id="859be92b845d48e8869e39884c9674d4" type="controls_if">
+              <block id="c9eea27cd7a44fdfbef9f837685c4f0f" type="controls_if">
                 <value name="IF0">
-                  <block id="dcdac0841c154e06b3e5f41ce4835dbf" type="logic_compare">
+                  <block id="6c128e1492174a08a377dc54135cebf4" type="logic_compare">
                     <field name="OP">EQ</field>
                     <value name="A">
-                      <block id="0cef8d785e224c3f8d6d55d7b71f05e2" type="component_set_get">
+                      <block id="879ca690277c481faad94ad94f6f18bc" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn5</field>
                         <field name="PROP">Text</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block id="8bfa13af4bcd461ca782b85ae8d1ab03" type="component_set_get">
+                      <block id="fa6ff52179d24771920c7a35c1ba2a70" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn9"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn9</field>
                         <field name="PROP">Text</field>
@@ -1147,15 +1458,15 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block id="bea34029dcec4448acf39e0e1d42cd2e" type="component_method">
-                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                  <block id="3f0a4ea8c9954d61b3d43fdc4f5bc7ee" type="component_method">
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
                     <field name="COMPONENT_SELECTOR">Notifier1</field>
                     <value name="ARG0">
-                      <block id="cd42289927b14a5c8551d7358ec33020" type="text_join">
+                      <block id="bcc3c02bb4bb4f34b65685d7a376bf11" type="text_join">
                         <mutation items="2"></mutation>
-                        <value name="ADD0"><block id="e6837173a387487a85cd15e22b5e0a36" type="text"><field name="TEXT">Winner: </field></block></value>
+                        <value name="ADD0"><block id="073e06501ae74109b0173aa9edc54fe1" type="text"><field name="TEXT">Winner: </field></block></value>
                         <value name="ADD1">
-                          <block id="cb08ef99f4784c50a3e2c30a38d06a59" type="component_set_get">
+                          <block id="8e87361d6fd640a0bc6a27f356fb9a24" type="component_set_get">
                             <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
                             <field name="COMPONENT_SELECTOR">Btn1</field>
                             <field name="PROP">Text</field>
@@ -1163,8 +1474,10 @@
                         </value>
                       </block>
                     </value>
+                    <value name="ARG1"><block id="99dc5790a6fe42ffb369cc4df86ae6aa" type="text"><field name="TEXT">Game Over!</field></block></value>
+                    <value name="ARG2"><block id="724fa3206078497d887353238c5d6fc0" type="text"><field name="TEXT">OK</field></block></value>
                     <next>
-                      <block id="3bbfa1f25dd246928cf3f30cd458bbf0" type="procedures_callnoreturn">
+                      <block id="10847e6fa57e415c8920025c5285a3de" type="procedures_callnoreturn">
                         <mutation name="ResetGame"></mutation>
                       </block>
                     </next>
@@ -1176,34 +1489,34 @@
         </statement>
         <next>
 
-      <block id="f2a6c97de3f24df6a479b27dda4561ff" type="controls_if">
+      <block id="907af921da234c109464b2435dccda59" type="controls_if">
         <value name="IF0">
-          <block id="913c98a4f8ce449e804876f0d4e0ade7" type="logic_compare">
+          <block id="a2eb0d56727040f28c9f35951f76e174" type="logic_compare">
             <field name="OP">NEQ</field>
             <value name="A">
-              <block id="22ca1596dfc54a8db1be2125416dae6d" type="component_set_get">
+              <block id="13c83411562d4c12ab7ddf72fd98e39d" type="component_set_get">
                 <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn3</field>
                 <field name="PROP">Text</field>
               </block>
             </value>
-            <value name="B"><block id="b390a789ea2c472c9d7fc1582e22dbb8" type="text"><field name="TEXT">_</field></block></value>
+            <value name="B"><block id="f9ccb6faced64672992e469c9ca1181f" type="text"><field name="TEXT">_</field></block></value>
           </block>
         </value>
         <statement name="DO0">
-          <block id="ef6e53ba95574d818b0b6f137a670f0c" type="controls_if">
+          <block id="238133084b4f410cb83f12e93225e124" type="controls_if">
             <value name="IF0">
-              <block id="7026eb9bc074496892ff4a2d373fc1f0" type="logic_compare">
+              <block id="be9bf95446dd42188ad827a4aae81a20" type="logic_compare">
                 <field name="OP">EQ</field>
                 <value name="A">
-                  <block id="06146967fed045f58823321526081825" type="component_set_get">
+                  <block id="3d38d2464d714ec3aa63fe2152eb2c95" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn3</field>
                     <field name="PROP">Text</field>
                   </block>
                 </value>
                 <value name="B">
-                  <block id="30a79fad16cf41708c075176e22063b9" type="component_set_get">
+                  <block id="1ccb6587db88459b8b4704425c1fc519" type="component_set_get">
                     <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
                     <field name="COMPONENT_SELECTOR">Btn5</field>
                     <field name="PROP">Text</field>
@@ -1212,19 +1525,19 @@
               </block>
             </value>
             <statement name="DO0">
-              <block id="076f312436874b1b929756ec38537a79" type="controls_if">
+              <block id="0a41cb2e351e40f39e51590916a0efba" type="controls_if">
                 <value name="IF0">
-                  <block id="71efc57b41bc44118e6ebc54ee82c499" type="logic_compare">
+                  <block id="be39f1cd6d3d427a837280bf58e88cce" type="logic_compare">
                     <field name="OP">EQ</field>
                     <value name="A">
-                      <block id="9eb85910fdae429aa28af2cfb63776ad" type="component_set_get">
+                      <block id="859b2819c8e8498bb73d357df792c033" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn5</field>
                         <field name="PROP">Text</field>
                       </block>
                     </value>
                     <value name="B">
-                      <block id="509a24990dbf43d38eb1d0720c70b7fd" type="component_set_get">
+                      <block id="42213af7b6da4266bc668e10143f9593" type="component_set_get">
                         <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn7"></mutation>
                         <field name="COMPONENT_SELECTOR">Btn7</field>
                         <field name="PROP">Text</field>
@@ -1233,15 +1546,15 @@
                   </block>
                 </value>
                 <statement name="DO0">
-                  <block id="b0988009a6e04eacb688e997de6a3a1e" type="component_method">
-                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                  <block id="c9f8d20ef04247d2a14acbf40887bef7" type="component_method">
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
                     <field name="COMPONENT_SELECTOR">Notifier1</field>
                     <value name="ARG0">
-                      <block id="b6f8df0bde3f452aaf2fc529673fc463" type="text_join">
+                      <block id="19cfd159723b46ed99aad7ed406cbb6b" type="text_join">
                         <mutation items="2"></mutation>
-                        <value name="ADD0"><block id="a1aa74bd8fe9485bb221a342f347452f" type="text"><field name="TEXT">Winner: </field></block></value>
+                        <value name="ADD0"><block id="76a378f0ddb34b2382e33230cf8c2c33" type="text"><field name="TEXT">Winner: </field></block></value>
                         <value name="ADD1">
-                          <block id="ffb4893bc0714156ab773543b5ddc206" type="component_set_get">
+                          <block id="e5225539f90d40d480d329898b1b4510" type="component_set_get">
                             <mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
                             <field name="COMPONENT_SELECTOR">Btn3</field>
                             <field name="PROP">Text</field>
@@ -1249,8 +1562,10 @@
                         </value>
                       </block>
                     </value>
+                    <value name="ARG1"><block id="b04201be346d4feaaa71d01a72337a77" type="text"><field name="TEXT">Game Over!</field></block></value>
+                    <value name="ARG2"><block id="45cfa4cb831c489ba1e77ea1344efebb" type="text"><field name="TEXT">OK</field></block></value>
                     <next>
-                      <block id="b9301f7f75c54324b930ef41145cee21" type="procedures_callnoreturn">
+                      <block id="8e2ecd26919849b5aa58531f94c11a3f" type="procedures_callnoreturn">
                         <mutation name="ResetGame"></mutation>
                       </block>
                     </next>
@@ -1261,86 +1576,189 @@
           </block>
         </statement>
         <next>
+
+          <!-- Tie Logic -->
+          <block id="ffb7f1710a2c445da59475a055726aa3" type="controls_if">
+            <value name="IF0">
+              <block id="715905726dff41979902bfdc7b85e6f4" type="logic_boolean"><field name="BOOL">TRUE</field></block>
+            </value>
+            <statement name="DO0">
+              <block id="984941b54852402bac56ff7b44c9e374" type="controls_if">
+
+                <value name="IF0">
+                  <block id="7b0e160e74484096b1ce42b7c0ff1633" type="logic_operation"><field name="OP">AND</field>
+                    
+                <value name="A">
+                  <block id="f30b5abab0a84f8caf4d7475dc38730a" type="logic_compare">
+                    <field name="OP">NEQ</field>
+                    <value name="A"><block id="5b01f0c45f3e4427bb061947c95ed115" type="component_set_get"><mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn1"></mutation><field name="COMPONENT_SELECTOR">Btn1</field><field name="PROP">Text</field></block></value>
+                    <value name="B"><block id="bbec75104dd643b389fd55435fd1440f" type="text"><field name="TEXT">_</field></block></value>
+                  </block>
+                </value>
+<value name="B"><block id="354808f29366473b816d13a331fcc621" type="logic_operation"><field name="OP">AND</field>
+                <value name="A">
+                  <block id="7bc86183723c4249bc7cf12eba8ac7f8" type="logic_compare">
+                    <field name="OP">NEQ</field>
+                    <value name="A"><block id="a8a84972e4734ec69f7d7d753f848f23" type="component_set_get"><mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn2"></mutation><field name="COMPONENT_SELECTOR">Btn2</field><field name="PROP">Text</field></block></value>
+                    <value name="B"><block id="8711d7ba529149f4b7fbcb12a9119ada" type="text"><field name="TEXT">_</field></block></value>
+                  </block>
+                </value>
+<value name="B"><block id="06c4c4d3d5f44410833086281f318c78" type="logic_operation"><field name="OP">AND</field>
+                <value name="A">
+                  <block id="9fc8937c3bce4da48cfd3cfbb1cbf891" type="logic_compare">
+                    <field name="OP">NEQ</field>
+                    <value name="A"><block id="4a3ed09ef7764271bf6ec5d386835bdb" type="component_set_get"><mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn3"></mutation><field name="COMPONENT_SELECTOR">Btn3</field><field name="PROP">Text</field></block></value>
+                    <value name="B"><block id="b350336b4b574c63a7d7466dd057c3e8" type="text"><field name="TEXT">_</field></block></value>
+                  </block>
+                </value>
+<value name="B"><block id="abd3e5e483a84e029163d7fb642693f4" type="logic_operation"><field name="OP">AND</field>
+                <value name="A">
+                  <block id="18cb34dbf18c481b92705d17a5764ac4" type="logic_compare">
+                    <field name="OP">NEQ</field>
+                    <value name="A"><block id="2718f143e0f5411e874352ac31a02b77" type="component_set_get"><mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn4"></mutation><field name="COMPONENT_SELECTOR">Btn4</field><field name="PROP">Text</field></block></value>
+                    <value name="B"><block id="dd96b867853a474faf1399c50d4c3191" type="text"><field name="TEXT">_</field></block></value>
+                  </block>
+                </value>
+<value name="B"><block id="f0ad3f3087124d10983021fc9bf0bbe8" type="logic_operation"><field name="OP">AND</field>
+                <value name="A">
+                  <block id="9ac34c5359d14e7a835d77181ce62e71" type="logic_compare">
+                    <field name="OP">NEQ</field>
+                    <value name="A"><block id="dff019684b2a4472ab8f0600643faf12" type="component_set_get"><mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn5"></mutation><field name="COMPONENT_SELECTOR">Btn5</field><field name="PROP">Text</field></block></value>
+                    <value name="B"><block id="174d9c6a06714efb992e05770182232d" type="text"><field name="TEXT">_</field></block></value>
+                  </block>
+                </value>
+<value name="B"><block id="a9230567833f44bea041c492c31362b5" type="logic_operation"><field name="OP">AND</field>
+                <value name="A">
+                  <block id="af84b05db34942e391c709ff511c57e4" type="logic_compare">
+                    <field name="OP">NEQ</field>
+                    <value name="A"><block id="d66c5fd0dffc486b91d2487e14c486c5" type="component_set_get"><mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn6"></mutation><field name="COMPONENT_SELECTOR">Btn6</field><field name="PROP">Text</field></block></value>
+                    <value name="B"><block id="b7ed5eba85f94234a5f5e4f972eb0524" type="text"><field name="TEXT">_</field></block></value>
+                  </block>
+                </value>
+<value name="B"><block id="8a3ab7936e9846d59686734b5f57a9ab" type="logic_operation"><field name="OP">AND</field>
+                <value name="A">
+                  <block id="14a11ca52ccf4a74bf1ad1517755040f" type="logic_compare">
+                    <field name="OP">NEQ</field>
+                    <value name="A"><block id="2dd89d8ea89845809d631f52122c8500" type="component_set_get"><mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn7"></mutation><field name="COMPONENT_SELECTOR">Btn7</field><field name="PROP">Text</field></block></value>
+                    <value name="B"><block id="f371cffdcff444819232bcfe9e1f9cdd" type="text"><field name="TEXT">_</field></block></value>
+                  </block>
+                </value>
+<value name="B"><block id="dd06722b3e6a42a8a2f44a26c8339890" type="logic_operation"><field name="OP">AND</field>
+                <value name="A">
+                  <block id="eb9ab44b02264d8fa984b0bfc75238af" type="logic_compare">
+                    <field name="OP">NEQ</field>
+                    <value name="A"><block id="8e29fe43ecc74342986bd7b0d20c29c5" type="component_set_get"><mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn8"></mutation><field name="COMPONENT_SELECTOR">Btn8</field><field name="PROP">Text</field></block></value>
+                    <value name="B"><block id="d019ee42e7654fd3b6bfb94c1869f126" type="text"><field name="TEXT">_</field></block></value>
+                  </block>
+                </value>
+<value name="B"><block id="9a13ffda3d6a43549e3f394c7ffc6042" type="logic_operation"><field name="OP">AND</field>
+                <value name="A">
+                  <block id="642612a38408470da82a193d9e120bf5" type="logic_compare">
+                    <field name="OP">NEQ</field>
+                    <value name="A"><block id="8a41b930b4b144b984198dd6f15d1f9f" type="component_set_get"><mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn9"></mutation><field name="COMPONENT_SELECTOR">Btn9</field><field name="PROP">Text</field></block></value>
+                    <value name="B"><block id="8cb3c81b054e4dca9d02c019ebfbcd3e" type="text"><field name="TEXT">_</field></block></value>
+                  </block>
+                </value>
+</block></value></block></value></block></value></block></value></block></value></block></value></block></value></block></value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block id="74843a0bbfb147998cb8d39bddcd211c" type="component_method">
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Notifier1</field>
+                    <value name="ARG0"><block id="2ae7772b748c4ccb88ff4066a5ca8761" type="text"><field name="TEXT">It's a Tie!</field></block></value>
+                    <value name="ARG1"><block id="ef6d8f1186e44f3488da597c2d650e8a" type="text"><field name="TEXT">Game Over</field></block></value>
+                    <value name="ARG2"><block id="f331ec024d904c74bcda1e05e751b749" type="text"><field name="TEXT">OK</field></block></value>
+                    <next>
+                      <block id="a77f16a88a2849109d1495870014045f" type="procedures_callnoreturn">
+                        <mutation name="ResetGame"></mutation>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
   </next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block>
     </statement>
   </block>
 
-  <block id="a50692aef7964b3aa0494ed84f1a49d0" type="procedures_defnoreturn" x="2000" y="-400">
+  <block id="23c2ed75997b4ab6a94004e808edbc59" type="procedures_defnoreturn" x="2000" y="-400">
     <field name="NAME">ResetGame</field>
     <statement name="STACK">
 
-      <block id="3a06a29f96a54d578130f0eea8ee14e8" type="component_set_get">
+      <block id="e6ef163ede714f35ba3a1e224569d2ef" type="component_set_get">
         <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
         <field name="COMPONENT_SELECTOR">Btn1</field>
         <field name="PROP">Text</field>
-        <value name="VALUE"><block id="86b95f28c6db479b9da249edb7985762" type="text"><field name="TEXT">_</field></block></value>
+        <value name="VALUE"><block id="7de33f3b92414bd18cdd6a6e547cab84" type="text"><field name="TEXT">_</field></block></value>
         <next>
 
-      <block id="2ffcf120af1a4163bd1e53fcf60e898e" type="component_set_get">
+      <block id="b136a030120f4a7b9135c9ba26c2319c" type="component_set_get">
         <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn2"></mutation>
         <field name="COMPONENT_SELECTOR">Btn2</field>
         <field name="PROP">Text</field>
-        <value name="VALUE"><block id="aea8addb969c456ca7eb66d16bb376c1" type="text"><field name="TEXT">_</field></block></value>
+        <value name="VALUE"><block id="ee6cb466a1ea45f98710284220431543" type="text"><field name="TEXT">_</field></block></value>
         <next>
 
-      <block id="6f7143f93b894c24b0c0f7275e0c43ae" type="component_set_get">
+      <block id="c86f112a0dab4e278f5b6f8a828906b3" type="component_set_get">
         <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
         <field name="COMPONENT_SELECTOR">Btn3</field>
         <field name="PROP">Text</field>
-        <value name="VALUE"><block id="b5622a0f4e814bb68b2f01ee33b3222c" type="text"><field name="TEXT">_</field></block></value>
+        <value name="VALUE"><block id="6ab447c041e54d55a7612557bd16894d" type="text"><field name="TEXT">_</field></block></value>
         <next>
 
-      <block id="00f4e0848ec34654b560971b0c30fa02" type="component_set_get">
+      <block id="f6d9d977ff124251abb0b45b7220f0b2" type="component_set_get">
         <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn4"></mutation>
         <field name="COMPONENT_SELECTOR">Btn4</field>
         <field name="PROP">Text</field>
-        <value name="VALUE"><block id="0d1cd79ff3324247a33320e2a45d99e9" type="text"><field name="TEXT">_</field></block></value>
+        <value name="VALUE"><block id="a58271b8bf684f26b8c40cebd0364288" type="text"><field name="TEXT">_</field></block></value>
         <next>
 
-      <block id="d640dad92a104e39976f0923185d2f98" type="component_set_get">
+      <block id="1ba345de46234f3fb252a6f16518f65c" type="component_set_get">
         <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
         <field name="COMPONENT_SELECTOR">Btn5</field>
         <field name="PROP">Text</field>
-        <value name="VALUE"><block id="184aa0a4359f4a3e84d7626ef8438c3c" type="text"><field name="TEXT">_</field></block></value>
+        <value name="VALUE"><block id="82f0edf25604485192d9615dceb74429" type="text"><field name="TEXT">_</field></block></value>
         <next>
 
-      <block id="0ed0230c76744b7ca483b99e2763bd60" type="component_set_get">
+      <block id="c68a0c6d462a43648698306fd21db0ae" type="component_set_get">
         <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn6"></mutation>
         <field name="COMPONENT_SELECTOR">Btn6</field>
         <field name="PROP">Text</field>
-        <value name="VALUE"><block id="e9e569937b8946dbba83d7a790320c48" type="text"><field name="TEXT">_</field></block></value>
+        <value name="VALUE"><block id="0f59ceea8aef4140b17297f63eaab7e7" type="text"><field name="TEXT">_</field></block></value>
         <next>
 
-      <block id="7b0e7af3c22d4968bd73f70095a4e5c7" type="component_set_get">
+      <block id="224c451a255e40068e1f6b2a8d663826" type="component_set_get">
         <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn7"></mutation>
         <field name="COMPONENT_SELECTOR">Btn7</field>
         <field name="PROP">Text</field>
-        <value name="VALUE"><block id="015b4c682c6f4915977c7a9f5032d275" type="text"><field name="TEXT">_</field></block></value>
+        <value name="VALUE"><block id="664bdf30ed9344b7bbddbea12d4387b2" type="text"><field name="TEXT">_</field></block></value>
         <next>
 
-      <block id="0bfc4a32613e4878ba5aa0bc5764e2fe" type="component_set_get">
+      <block id="229d848cd3864fd5bf3c4382f8b9b026" type="component_set_get">
         <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn8"></mutation>
         <field name="COMPONENT_SELECTOR">Btn8</field>
         <field name="PROP">Text</field>
-        <value name="VALUE"><block id="0d038f51bd654b4fa5384fd8c525c61d" type="text"><field name="TEXT">_</field></block></value>
+        <value name="VALUE"><block id="040d1c8039d54926a49bf47dc3b254b6" type="text"><field name="TEXT">_</field></block></value>
         <next>
 
-      <block id="54875d5b86274cdc84752c0fa1b63358" type="component_set_get">
+      <block id="bab7a9d55be947fca7274b7b9a226a67" type="component_set_get">
         <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn9"></mutation>
         <field name="COMPONENT_SELECTOR">Btn9</field>
         <field name="PROP">Text</field>
-        <value name="VALUE"><block id="646002fb9f91412bb7a4020d7c974adf" type="text"><field name="TEXT">_</field></block></value>
+        <value name="VALUE"><block id="f1eac18c52c24b70be01a637fcb949f0" type="text"><field name="TEXT">_</field></block></value>
         <next>
 
-        <block id="fe2b3f4559184b72a2bf115e19d28f93" type="lexical_variable_set">
+        <block id="5bf46d3d5ed04830bebb8b37aa8efc08" type="lexical_variable_set">
           <field name="VAR">global turn</field>
-          <value name="VALUE"><block id="c44ed393968842fea8143e08c13cdb1e" type="text"><field name="TEXT">X</field></block></value>
+          <value name="VALUE"><block id="d16344d69a4148bd90fdec9cb2ecc452" type="text"><field name="TEXT">X</field></block></value>
           <next>
-            <block id="08ea0cad863f4005977943725a7a3b54" type="component_set_get">
+            <block id="cbc2a1b963fe4849a1bbb23bc51ea778" type="component_set_get">
               <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="LblTurn"></mutation>
               <field name="COMPONENT_SELECTOR">LblTurn</field>
               <field name="PROP">Text</field>
-              <value name="VALUE"><block id="8d8676103cda47bc9766af4c5c9ea2ba" type="text"><field name="TEXT">X Turn</field></block></value>
+              <value name="VALUE"><block id="99b27f3090b84551a8316c44d0e14843" type="text"><field name="TEXT">X Turn</field></block></value>
             </block>
           </next>
         </block>
@@ -1348,231 +1766,249 @@
     </statement>
   </block>
 
-  <block id="e6b81787f7bf42dba3dfd493bf62c241" type="component_event" x="-1000" y="200">
+  <block id="ec25e569c159415ba24366466961fa98" type="component_event" x="-1000" y="200">
     <mutation component_type="Notifier" is_generic="false" instance_name="Notifier1" event_name="AfterTextInput"></mutation>
     <field name="COMPONENT_SELECTOR">Notifier1</field>
     <statement name="DO">
-      <block id="7d0282d949c34434b9be6a45bbb3227b" type="controls_if">
+      <block id="ede42afca5c1451e8dbe835430ef3741" type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
-          <block id="0db0e323b0d4459aa53109aa580817f4" type="logic_compare">
-            <field name="OP">EQ</field>
+          <block id="adb38544045e4dda83d530fd83b9d862" type="logic_operation">
+            <field name="OP">AND</field>
+            <!-- Check that response is NOT EMPTY -->
             <value name="A">
-              <block id="6d07f7874c984c2ba7449d9ed53980cd" type="text_changeCase">
-                <field name="OP">DOWNCASE</field>
-                <value name="STRING"><block id="18aa70727f55432d85c5943f8a1a9afd" type="lexical_variable_get"><mutation><eventparam name="response"></eventparam></mutation><field name="VAR">response</field></block></value>
+              <block id="dc388b3ac5d04d6f94046a205e6d6a99" type="logic_compare">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block id="d4d44e57b2d24739a8ed40a2d06ddcc4" type="text_trim">
+                    <value name="TEXT"><block id="503e58638fc6402c94713d2f417c0a27" type="lexical_variable_get"><mutation><eventparam name="response"></eventparam></mutation><field name="VAR">response</field></block></value>
+                  </block>
+                </value>
+                <value name="B"><block id="463b6e88e211487a9867d8a31ce7d148" type="text"><field name="TEXT"></field></block></value>
               </block>
             </value>
+            <!-- Check that response equals current_answer -->
             <value name="B">
-              <block id="93566643cb9b4bd4b2ef619383d1d0e0" type="text_changeCase">
-                <field name="OP">DOWNCASE</field>
-                <value name="STRING"><block id="c658b0a189fa4a50bb97c5972c45ef40" type="lexical_variable_get"><field name="VAR">global current_answer</field></block></value>
+              <block id="1849dd6f45a74691b3ba369a07b32274" type="logic_compare">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block id="28e14ceac89246e7820fc54527be3170" type="text_changeCase">
+                    <field name="OP">DOWNCASE</field>
+                    <value name="STRING">
+                      <block id="755c8cb1d0034b109071579b11dd62eb" type="text_trim">
+                        <value name="TEXT"><block id="665b7f6c16644135bf52740f8afb7c60" type="lexical_variable_get"><mutation><eventparam name="response"></eventparam></mutation><field name="VAR">response</field></block></value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block id="b3413092358d40c7b8ce110e5a9825b0" type="text_changeCase">
+                    <field name="OP">DOWNCASE</field>
+                    <value name="STRING"><block id="72d6602dbba54951ada8ae318458eae4" type="lexical_variable_get"><field name="VAR">global current_answer</field></block></value>
+                  </block>
+                </value>
               </block>
             </value>
           </block>
         </value>
         <statement name="DO0">
           <!-- CORRECT -->
-          <block id="eb7aec2d48554389a40b1b32a562a73b" type="controls_if">
+          <block id="cb57e46fe21f4f56b719b5711533f002" type="controls_if">
             <mutation elseif="8"></mutation>
 
             <value name="IF0">
-              <block id="a7442487ffc54283b278188b9fa1ba6a" type="logic_compare">
+              <block id="240bb463933341ca9eb3c9559eaded66" type="logic_compare">
                 <field name="OP">EQ</field>
-                <value name="A"><block id="074684fd97e84a7281f10d7e3b7d8bf6" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
-                <value name="B"><block id="b66d86f90dd64918ad3db19ae5d53961" type="text"><field name="TEXT">Btn1</field></block></value>
+                <value name="A"><block id="f590ca09cbad49fea2969ac1c07067b7" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block id="6cd334b53b1c4bf7a3ab2607505225c1" type="text"><field name="TEXT">Btn1</field></block></value>
               </block>
             </value>
             <statement name="DO0">
-              <block id="c8adc5e2ddec40c38f52974fd2dd323c" type="component_set_get">
+              <block id="6273bdb9c0f74be282155e6ee7d4032f" type="component_set_get">
                 <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn1"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn1</field>
                 <field name="PROP">Text</field>
-                <value name="VALUE"><block id="41bd7fa8ac0f41e1a950c7ca2f3c1836" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                <value name="VALUE"><block id="23f5abc02b5f4979b22305d832291694" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
               </block>
             </statement>
 
             <value name="IF1">
-              <block id="d14b6cf13dc643faad380044441e8141" type="logic_compare">
+              <block id="97cb94e8c0064485ab2e66f3ef78ff2d" type="logic_compare">
                 <field name="OP">EQ</field>
-                <value name="A"><block id="e787c936957a47848d3bb40b3ea12aff" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
-                <value name="B"><block id="00840e7d681a4ef589b2fb9946930872" type="text"><field name="TEXT">Btn2</field></block></value>
+                <value name="A"><block id="c60198ad9e41494491bb9d7f5c684ee1" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block id="2cc6468912984bc49ad32a0c95dc9326" type="text"><field name="TEXT">Btn2</field></block></value>
               </block>
             </value>
             <statement name="DO1">
-              <block id="048104385f8b46c7a614486dd723f625" type="component_set_get">
+              <block id="63e497af2d0144db95de30dcdfd2cfd6" type="component_set_get">
                 <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn2"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn2</field>
                 <field name="PROP">Text</field>
-                <value name="VALUE"><block id="2ee7e1c4eaa749cea3c32cac60a4de31" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                <value name="VALUE"><block id="b71be35d0d2245438e4ba8bce571df8d" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
               </block>
             </statement>
 
             <value name="IF2">
-              <block id="8fecb1d1c695406ca880142acff4a3fa" type="logic_compare">
+              <block id="df4d173f370740debb269278861570b7" type="logic_compare">
                 <field name="OP">EQ</field>
-                <value name="A"><block id="dff201a7d06644b8beb2fbb5d8704a23" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
-                <value name="B"><block id="7b45b0668b394e77acb7bf0c8dcdff6e" type="text"><field name="TEXT">Btn3</field></block></value>
+                <value name="A"><block id="c4c08599f04b404d9cc51d0ec12752aa" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block id="7d9077e3302649038b57bf9b91a923fd" type="text"><field name="TEXT">Btn3</field></block></value>
               </block>
             </value>
             <statement name="DO2">
-              <block id="5be1fa34fe614e0683ac49b08b3135b8" type="component_set_get">
+              <block id="1b89c9045b814520b27c4a9c36b9f9e5" type="component_set_get">
                 <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn3"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn3</field>
                 <field name="PROP">Text</field>
-                <value name="VALUE"><block id="4e2b13ea6ecf46bdb638ce3584c46bd5" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                <value name="VALUE"><block id="f0ed5599744948d69618f1114358eb0c" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
               </block>
             </statement>
 
             <value name="IF3">
-              <block id="2628d0b690e94370b71ab11b3d780034" type="logic_compare">
+              <block id="6c7a923675b84d0194252068890a5594" type="logic_compare">
                 <field name="OP">EQ</field>
-                <value name="A"><block id="f2e96d4068624adba011b6b4112630c3" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
-                <value name="B"><block id="7f1f1c3bf6f24c449c6b5a66d56deaa1" type="text"><field name="TEXT">Btn4</field></block></value>
+                <value name="A"><block id="81c4e5871b5f4f0289b2e5c33b872908" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block id="1550fed8b86149608d2d2ab1aa9f7f5e" type="text"><field name="TEXT">Btn4</field></block></value>
               </block>
             </value>
             <statement name="DO3">
-              <block id="3ee5635e9c8b4a04a77b547ad97ee5e9" type="component_set_get">
+              <block id="05e10053658d4923b25f131979ccdfc9" type="component_set_get">
                 <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn4"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn4</field>
                 <field name="PROP">Text</field>
-                <value name="VALUE"><block id="24dce3de37ed40d892193b090a4fdddb" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                <value name="VALUE"><block id="2d395ebf9e844155bd70bf139d260229" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
               </block>
             </statement>
 
             <value name="IF4">
-              <block id="b5c3a44ab93b4f11a2d3d3c2efb74710" type="logic_compare">
+              <block id="3ffc7b9e718a47ad9b2aa861eb35245d" type="logic_compare">
                 <field name="OP">EQ</field>
-                <value name="A"><block id="7833879bd1fd46a0bf235d8f73fd3158" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
-                <value name="B"><block id="ad4eb31e28ea488694e2e3574e57eedf" type="text"><field name="TEXT">Btn5</field></block></value>
+                <value name="A"><block id="542d5539120e4af3a23cf9071048e398" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block id="2b484ec609bb4ea89e79fd3434b299a4" type="text"><field name="TEXT">Btn5</field></block></value>
               </block>
             </value>
             <statement name="DO4">
-              <block id="d60fd8b6243a421389a0b905373563a2" type="component_set_get">
+              <block id="4d961f9d7e3a41b3a0fd17d3c7b12719" type="component_set_get">
                 <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn5"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn5</field>
                 <field name="PROP">Text</field>
-                <value name="VALUE"><block id="074dfa1908cd44629d7a8048d575a626" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                <value name="VALUE"><block id="0365bff93a274f59aa3817e94d7d3f07" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
               </block>
             </statement>
 
             <value name="IF5">
-              <block id="da172b68b9e14d47aed6a1f1c9faeda4" type="logic_compare">
+              <block id="340410d4adb748fea2cdb2981c2b6d3d" type="logic_compare">
                 <field name="OP">EQ</field>
-                <value name="A"><block id="18e613dae7a74a76b3b4921d9b46bd8c" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
-                <value name="B"><block id="a20b88710c6f41a2a3fb4534c81b3ff8" type="text"><field name="TEXT">Btn6</field></block></value>
+                <value name="A"><block id="d65523652b7c4424a5c867f4051e5cde" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block id="ec3afc8d0047475bac77250685b82c5d" type="text"><field name="TEXT">Btn6</field></block></value>
               </block>
             </value>
             <statement name="DO5">
-              <block id="446b1118a71b4abf825b1399a24c13d3" type="component_set_get">
+              <block id="793f8b1d7a67426ba924ca3f5016d53c" type="component_set_get">
                 <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn6"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn6</field>
                 <field name="PROP">Text</field>
-                <value name="VALUE"><block id="f4bc1cf4d8bd42ef9b90b23c3d82c5c2" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                <value name="VALUE"><block id="e0dc90b406b148eb8b96fbf8e99a2a77" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
               </block>
             </statement>
 
             <value name="IF6">
-              <block id="0eb8f550448f4ebaac49891d276b2159" type="logic_compare">
+              <block id="98a05bd792284d9293bb787aea0f619f" type="logic_compare">
                 <field name="OP">EQ</field>
-                <value name="A"><block id="e93410801f4848eb8e3eeb5fce8a472a" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
-                <value name="B"><block id="64dd962bc19f4e9481106553d8eb00ab" type="text"><field name="TEXT">Btn7</field></block></value>
+                <value name="A"><block id="5983ebb2471545d1a609a3c56e9a58fb" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block id="c32f039e438c4d0aa9f88cfa64b384c9" type="text"><field name="TEXT">Btn7</field></block></value>
               </block>
             </value>
             <statement name="DO6">
-              <block id="44d9e77c52cb477b8c673ead7eb9e927" type="component_set_get">
+              <block id="3819f887976c4590a9138ede3c6e2c4a" type="component_set_get">
                 <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn7"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn7</field>
                 <field name="PROP">Text</field>
-                <value name="VALUE"><block id="8308e4cb70ef4edea4373ce1ba8b3f26" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                <value name="VALUE"><block id="dae367ee4f0642bea4e5e20f39fa7f7b" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
               </block>
             </statement>
 
             <value name="IF7">
-              <block id="04319d804d4d45dea274d8463ab5a4e4" type="logic_compare">
+              <block id="3b75e0d8bea148adb9eb4ab280864da4" type="logic_compare">
                 <field name="OP">EQ</field>
-                <value name="A"><block id="22699890dd8a41848ca0e587b2df493a" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
-                <value name="B"><block id="963eb7b864d64c0baa798f76cb249d54" type="text"><field name="TEXT">Btn8</field></block></value>
+                <value name="A"><block id="ef3136721c3444079369d1173b551c36" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block id="e52d4bdf0e494dd49c53c1eae86659ab" type="text"><field name="TEXT">Btn8</field></block></value>
               </block>
             </value>
             <statement name="DO7">
-              <block id="74850eb4880347c3855bb6ca9f44dc55" type="component_set_get">
+              <block id="5bd3b88a7db740ed8e42b01fdc1d809a" type="component_set_get">
                 <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn8"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn8</field>
                 <field name="PROP">Text</field>
-                <value name="VALUE"><block id="33f0432a9fb94d3198b8bcf4e880b8cc" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                <value name="VALUE"><block id="03fe9d28f3bf49b3b150d776839c5a23" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
               </block>
             </statement>
 
             <value name="IF8">
-              <block id="5efa318166a74dadaa0844014c5e691f" type="logic_compare">
+              <block id="1f5e72b24ca44f2298485050eceb6f62" type="logic_compare">
                 <field name="OP">EQ</field>
-                <value name="A"><block id="f93681f0d04346bfbcf25491071da623" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
-                <value name="B"><block id="64f16b2a50564a16b96b390f36d4320b" type="text"><field name="TEXT">Btn9</field></block></value>
+                <value name="A"><block id="82ab3604f3d54aa1b64efd36a346617d" type="lexical_variable_get"><field name="VAR">global pending_move</field></block></value>
+                <value name="B"><block id="1e90e60452cb4dc79573659c2c5e6fdd" type="text"><field name="TEXT">Btn9</field></block></value>
               </block>
             </value>
             <statement name="DO8">
-              <block id="98601fc9571f4f229b68ebcfb0177caa" type="component_set_get">
+              <block id="22ba2d8b950c4604b4620d898275940b" type="component_set_get">
                 <mutation component_type="Button" set_or_get="set" property_name="Text" is_generic="false" instance_name="Btn9"></mutation>
                 <field name="COMPONENT_SELECTOR">Btn9</field>
                 <field name="PROP">Text</field>
-                <value name="VALUE"><block id="e0621b3d086e4ede8a38e9b055172650" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                <value name="VALUE"><block id="214fa7e973fe49b697e484c26e0c8842" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
               </block>
             </statement>
 
           </block>
         </statement>
         <statement name="ELSE">
-          <!-- INCORRECT -->
-          <block id="c6a34e6f65b54c56a4d83ca3c91723ce" type="component_method">
-            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+          <!-- INCORRECT - Using ShowMessageDialog to force user to acknowledge -->
+          <block id="b852bad585b6466aa825e865cde3fb6b" type="component_method">
+            <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
             <field name="COMPONENT_SELECTOR">Notifier1</field>
-            <value name="ARG0">
-              <block id="0f654b37c7054ed68a935a42df1a87ee" type="text_join">
-                <mutation items="2"></mutation>
-                <value name="ADD0"><block id="f776c4f4595545f28352ef62ba843b74" type="text"><field name="TEXT">Incorrect! Turn passed to the opponent.</field></block></value>
-                <value name="ADD1"><block id="32061bfbab4a443c8131e1fefe79f181" type="text"><field name="TEXT"></field></block></value>
-              </block>
-            </value>
+            <value name="ARG0"><block id="9dec12fd4b8044a6b3799b8aaa97676b" type="text"><field name="TEXT">Incorrect! Turn passed to the opponent.</field></block></value>
+            <value name="ARG1"><block id="b1392aa889ff468dbe11a1ed85f3f0ac" type="text"><field name="TEXT">Oops!</field></block></value>
+            <value name="ARG2"><block id="07e86dd51185458e88cc14689098d9da" type="text"><field name="TEXT">OK</field></block></value>
           </block>
         </statement>
         <next>
           <!-- SWAP TURN & CHECK WIN -->
-          <block id="4bc6442927fd421eaf8be50d70dffffb" type="controls_if">
+          <block id="40514850d6f748b1814619e5259b5d71" type="controls_if">
             <mutation else="1"></mutation>
             <value name="IF0">
-              <block id="97e5becea9c14069a750c82001b48979" type="logic_compare">
+              <block id="f5a4a3c763384a4eb0fab9b6528fd72a" type="logic_compare">
                 <field name="OP">EQ</field>
-                <value name="A"><block id="2cc2f8adf97a4f49a602d5e28a22907e" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
-                <value name="B"><block id="c84d7dfcc3c4415e87ef8840744f7fed" type="text"><field name="TEXT">X</field></block></value>
+                <value name="A"><block id="2008abc97b8c4c32bdd99c0721f24689" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                <value name="B"><block id="cf6d6dba302742fb8fa23d8326fd4d74" type="text"><field name="TEXT">X</field></block></value>
               </block>
             </value>
             <statement name="DO0">
-              <block id="9b66f2f49fec4365bb830b44da196f3d" type="lexical_variable_set">
+              <block id="21c0642805db402fbc5ce6e8ca09d4b8" type="lexical_variable_set">
                 <field name="VAR">global turn</field>
-                <value name="VALUE"><block id="6c88f6150e0c4bb8a8530039514cdf19" type="text"><field name="TEXT">O</field></block></value>
+                <value name="VALUE"><block id="d5a7a858e6284226a995fcbfb6dd44da" type="text"><field name="TEXT">O</field></block></value>
               </block>
             </statement>
             <statement name="ELSE">
-              <block id="a3d619e9a5cc415b9decf5da11313b72" type="lexical_variable_set">
+              <block id="6e7ad895b852419aa8c3b86e72f74983" type="lexical_variable_set">
                 <field name="VAR">global turn</field>
-                <value name="VALUE"><block id="2899752e2f794f9987f676c94d32c00b" type="text"><field name="TEXT">X</field></block></value>
+                <value name="VALUE"><block id="1bbab19c7f1a4fd69fa0bb4e87aaff73" type="text"><field name="TEXT">X</field></block></value>
               </block>
             </statement>
             <next>
-              <block id="ce2e74da387548cd93dac440043ee7bb" type="component_set_get">
+              <block id="589961f3326a4857acf53e58dce47c13" type="component_set_get">
                 <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="LblTurn"></mutation>
                 <field name="COMPONENT_SELECTOR">LblTurn</field>
                 <field name="PROP">Text</field>
                 <value name="VALUE">
-                   <block id="eafc3e17faaf480dbb90e8c292aa675b" type="text_join">
+                   <block id="ec889ad588e94959beb6dcae2423cae1" type="text_join">
                       <mutation items="2"></mutation>
-                      <value name="ADD0"><block id="d68eb486f2454bada8b537aa021ab134" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
-                      <value name="ADD1"><block id="9cacde9040ff44c9ac9282b5efcc00ee" type="text"><field name="TEXT"> Turn</field></block></value>
+                      <value name="ADD0"><block id="1bf9adef2548466d87c1fc59bf4c16f8" type="lexical_variable_get"><field name="VAR">global turn</field></block></value>
+                      <value name="ADD1"><block id="82cc599b5b13482b8062e1146006c0e5" type="text"><field name="TEXT"> Turn</field></block></value>
                    </block>
                 </value>
                 <next>
-                  <block id="84ffaf85e63e4fb6b6a0fafbf8944d85" type="procedures_callnoreturn">
+                  <block id="ef8907002ca143e0b7c18bb1748c1dea" type="procedures_callnoreturn">
                     <mutation name="CheckWin"></mutation>
                   </block>
                 </next>
@@ -1584,11 +2020,11 @@
     </statement>
   </block>
 
-  <block id="dcb8aecc90fe408facc6fe276568dec8" type="component_event" x="-1000" y="1000">
+  <block id="9f770bbe75324a1280c21c75dccca711" type="component_event" x="-1000" y="1000">
     <mutation component_type="Button" is_generic="false" instance_name="BtnReset" event_name="Click"></mutation>
     <field name="COMPONENT_SELECTOR">BtnReset</field>
     <statement name="DO">
-      <block id="4dacf81f06ef47c7984a8f630a68fd47" type="procedures_callnoreturn">
+      <block id="9d20daaabfc042189928bf8e7a1788d9" type="procedures_callnoreturn">
         <mutation name="ResetGame"></mutation>
       </block>
     </statement>

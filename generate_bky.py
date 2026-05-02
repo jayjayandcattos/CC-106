@@ -19,27 +19,53 @@ xml_content = """<xml xmlns="http://www.w3.org/1999/xhtml">
     <field name="NAME">selected_category</field>
     <value name="VALUE"><block type="text"><field name="TEXT">GEO</field></block></value>
   </block>
+  <block type="global_declaration" x="-1000" y="-600">
+    <field name="NAME">selected_difficulty</field>
+    <value name="VALUE"><block type="text"><field name="TEXT">EASY</field></block></value>
+  </block>
 """
 
+# Question matrix
 categories = {
-    "q_geo": [
-        ("Geo Easy: Capital of France?", "paris"),
-        ("Geo Med: Capital of Australia?", "canberra"),
-        ("Geo Hard: Capital of Burkina Faso?", "ouagadougou")
+    "q_geo_easy": [
+        ("Capital of France?", "paris"),
+        ("Capital of Japan?", "tokyo")
     ],
-    "q_math": [
-        ("Math Easy: What is 5 + 7?", "12"),
-        ("Math Med: What is 12 * 12?", "144"),
-        ("Math Hard: Square root of 225?", "15")
+    "q_geo_med": [
+        ("Capital of Australia?", "canberra"),
+        ("Capital of Canada?", "ottawa")
     ],
-    "q_trivia": [
-        ("Trivia Easy: Color of a school bus?", "yellow"),
-        ("Trivia Med: How many continents are there?", "7"),
-        ("Trivia Hard: A network security system? (Hint: firewall)", "firewall")
+    "q_geo_hard": [
+        ("Capital of Burkina Faso?", "ouagadougou"),
+        ("Capital of Madagascar?", "antananarivo")
+    ],
+    "q_math_easy": [
+        ("What is 5 + 7?", "12"),
+        ("What is 20 - 6?", "14")
+    ],
+    "q_math_med": [
+        ("What is 12 * 12?", "144"),
+        ("What is 56 / 8?", "7")
+    ],
+    "q_math_hard": [
+        ("Square root of 225?", "15"),
+        ("2 to the power of 8?", "256")
+    ],
+    "q_trivia_easy": [
+        ("Color of a school bus?", "yellow"),
+        ("How many legs does a spider have?", "8")
+    ],
+    "q_trivia_med": [
+        ("How many continents are there?", "7"),
+        ("Who wrote Romeo and Juliet?", "shakespeare")
+    ],
+    "q_trivia_hard": [
+        ("A network security system? (Hint: firewall)", "firewall"),
+        ("What element is 'Fe' on the periodic table?", "iron")
     ]
 }
 
-y_pos = -600
+y_pos = -500
 for cat_name, questions in categories.items():
     xml_content += f"""
   <block type="global_declaration" x="-1000" y="{y_pos}">
@@ -65,9 +91,9 @@ for cat_name, questions in categories.items():
 """
     y_pos += 50
 
-# Navigation Buttons
-nav_buttons = [("BtnGeo", "GEO"), ("BtnMath", "MATH"), ("BtnTrivia", "TRIV")]
-for btn, val in nav_buttons:
+# Navigation Buttons (Category -> Difficulty)
+nav_categories = [("BtnGeo", "GEO"), ("BtnMath", "MATH"), ("BtnTrivia", "TRIV")]
+for btn, val in nav_categories:
     xml_content += f"""
   <block type="component_event" x="-1500" y="{y_pos}">
     <mutation component_type="Button" is_generic="false" instance_name="{btn}" event_name="Click"></mutation>
@@ -80,6 +106,39 @@ for btn, val in nav_buttons:
           <block type="component_set_get">
             <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewCategory"></mutation>
             <field name="COMPONENT_SELECTOR">ViewCategory</field>
+            <field name="PROP">Visible</field>
+            <value name="VALUE"><block type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+            <next>
+              <block type="component_set_get">
+                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewDifficulty"></mutation>
+                <field name="COMPONENT_SELECTOR">ViewDifficulty</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE"><block type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+"""
+    y_pos += 100
+
+# Navigation Buttons (Difficulty -> Game)
+nav_diff = [("BtnEasy", "EASY"), ("BtnMed", "MED"), ("BtnHard", "HARD")]
+for btn, val in nav_diff:
+    xml_content += f"""
+  <block type="component_event" x="-1500" y="{y_pos}">
+    <mutation component_type="Button" is_generic="false" instance_name="{btn}" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">{btn}</field>
+    <statement name="DO">
+      <block type="lexical_variable_set">
+        <field name="VAR">global selected_difficulty</field>
+        <value name="VALUE"><block type="text"><field name="TEXT">{val}</field></block></value>
+        <next>
+          <block type="component_set_get">
+            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewDifficulty"></mutation>
+            <field name="COMPONENT_SELECTOR">ViewDifficulty</field>
             <field name="PROP">Visible</field>
             <value name="VALUE"><block type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
             <next>
@@ -103,7 +162,7 @@ for btn, val in nav_buttons:
 """
     y_pos += 100
 
-# BtnBack Click
+# BtnBack Click (Return to Category from Game)
 xml_content += f"""
   <block type="component_event" x="-1500" y="{y_pos}">
     <mutation component_type="Button" is_generic="false" instance_name="BtnBack" event_name="Click"></mutation>
@@ -116,10 +175,18 @@ xml_content += f"""
         <value name="VALUE"><block type="logic_boolean"><field name="BOOL">TRUE</field></block></value>
         <next>
           <block type="component_set_get">
-            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewGame"></mutation>
-            <field name="COMPONENT_SELECTOR">ViewGame</field>
+            <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewDifficulty"></mutation>
+            <field name="COMPONENT_SELECTOR">ViewDifficulty</field>
             <field name="PROP">Visible</field>
             <value name="VALUE"><block type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+            <next>
+              <block type="component_set_get">
+                <mutation component_type="VerticalArrangement" set_or_get="set" property_name="Visible" is_generic="false" instance_name="ViewGame"></mutation>
+                <field name="COMPONENT_SELECTOR">ViewGame</field>
+                <field name="PROP">Visible</field>
+                <value name="VALUE"><block type="logic_boolean"><field name="BOOL">FALSE</field></block></value>
+              </block>
+            </next>
           </block>
         </next>
       </block>
@@ -127,7 +194,7 @@ xml_content += f"""
   </block>
 """
 
-# HandleMove procedure
+# HandleMove
 xml_content += """
   <block type="procedures_defnoreturn" x="-1000" y="-400">
     <mutation><arg name="btnId"></arg></mutation>
@@ -145,50 +212,124 @@ xml_content += """
     </statement>
   </block>
 
-  <!-- Ask Question (with Category filter) -->
-  <block type="procedures_defnoreturn" x="-1000" y="-200">
+  <!-- Ask Question (with strict Category + Difficulty routing) -->
+  <block type="global_declaration" x="-1000" y="-150">
+    <field name="NAME">current_q_pair</field>
+    <value name="VALUE"><block type="lists_create_with"><mutation items="0"></mutation></block></value>
+  </block>
+
+  <block type="procedures_defnoreturn" x="-1000" y="-100">
     <field name="NAME">AskQuestion</field>
     <statement name="STACK">
-      <block type="local_declaration_statement">
-        <mutation><localname name="q_pair"></localname></mutation>
-        <field name="VAR0">q_pair</field>
-        <value name="DECL0">
-          <block type="controls_choose">
-            <value name="TEST">
-              <block type="logic_compare">
-                <field name="OP">EQ</field>
-                <value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value>
-                <value name="B"><block type="text"><field name="TEXT">GEO</field></block></value>
-              </block>
-            </value>
-            <value name="THENRETURN">
-              <block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_geo</field></block></value></block>
-            </value>
-            <value name="ELSERETURN">
-              <block type="controls_choose">
-                <value name="TEST">
-                  <block type="logic_compare">
-                    <field name="OP">EQ</field>
-                    <value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value>
-                    <value name="B"><block type="text"><field name="TEXT">MATH</field></block></value>
-                  </block>
-                </value>
-                <value name="THENRETURN">
-                  <block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_math</field></block></value></block>
-                </value>
-                <value name="ELSERETURN">
-                  <block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_trivia</field></block></value></block>
-                </value>
-              </block>
-            </value>
+      <block type="controls_if">
+        <mutation elseif="8"></mutation>
+        <!-- Geo Easy -->
+        <value name="IF0">
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block type="text"><field name="TEXT">GEO</field></block></value></block></value>
+            <value name="B"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block type="text"><field name="TEXT">EASY</field></block></value></block></value>
           </block>
         </value>
-        <statement name="STACK">
+        <statement name="DO0">
+          <block type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_geo_easy</field></block></value></block></value></block>
+        </statement>
+        <!-- Geo Med -->
+        <value name="IF1">
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block type="text"><field name="TEXT">GEO</field></block></value></block></value>
+            <value name="B"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block type="text"><field name="TEXT">MED</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_geo_med</field></block></value></block></value></block>
+        </statement>
+        <!-- Geo Hard -->
+        <value name="IF2">
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block type="text"><field name="TEXT">GEO</field></block></value></block></value>
+            <value name="B"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block type="text"><field name="TEXT">HARD</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO2">
+          <block type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_geo_hard</field></block></value></block></value></block>
+        </statement>
+
+        <!-- Math Easy -->
+        <value name="IF3">
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block type="text"><field name="TEXT">MATH</field></block></value></block></value>
+            <value name="B"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block type="text"><field name="TEXT">EASY</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO3">
+          <block type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_math_easy</field></block></value></block></value></block>
+        </statement>
+        <!-- Math Med -->
+        <value name="IF4">
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block type="text"><field name="TEXT">MATH</field></block></value></block></value>
+            <value name="B"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block type="text"><field name="TEXT">MED</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO4">
+          <block type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_math_med</field></block></value></block></value></block>
+        </statement>
+        <!-- Math Hard -->
+        <value name="IF5">
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block type="text"><field name="TEXT">MATH</field></block></value></block></value>
+            <value name="B"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block type="text"><field name="TEXT">HARD</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO5">
+          <block type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_math_hard</field></block></value></block></value></block>
+        </statement>
+
+        <!-- Trivia Easy -->
+        <value name="IF6">
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block type="text"><field name="TEXT">TRIV</field></block></value></block></value>
+            <value name="B"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block type="text"><field name="TEXT">EASY</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO6">
+          <block type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_trivia_easy</field></block></value></block></value></block>
+        </statement>
+        <!-- Trivia Med -->
+        <value name="IF7">
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block type="text"><field name="TEXT">TRIV</field></block></value></block></value>
+            <value name="B"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block type="text"><field name="TEXT">MED</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO7">
+          <block type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_trivia_med</field></block></value></block></value></block>
+        </statement>
+        <!-- Trivia Hard -->
+        <value name="IF8">
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+            <value name="A"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_category</field></block></value><value name="B"><block type="text"><field name="TEXT">TRIV</field></block></value></block></value>
+            <value name="B"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><block type="lexical_variable_get"><field name="VAR">global selected_difficulty</field></block></value><value name="B"><block type="text"><field name="TEXT">HARD</field></block></value></block></value>
+          </block>
+        </value>
+        <statement name="DO8">
+          <block type="lexical_variable_set"><field name="VAR">global current_q_pair</field><value name="VALUE"><block type="lists_pick_random_item"><value name="LIST"><block type="lexical_variable_get"><field name="VAR">global q_trivia_hard</field></block></value></block></value></block>
+        </statement>
+        <next>
           <block type="lexical_variable_set">
             <field name="VAR">global current_answer</field>
             <value name="VALUE">
               <block type="lists_select_item">
-                <value name="LIST"><block type="lexical_variable_get"><field name="VAR">q_pair</field></block></value>
+                <value name="LIST"><block type="lexical_variable_get"><field name="VAR">global current_q_pair</field></block></value>
                 <value name="NUM"><block type="math_number"><field name="NUM">2</field></block></value>
               </block>
             </value>
@@ -198,7 +339,7 @@ xml_content += """
                 <field name="COMPONENT_SELECTOR">Notifier1</field>
                 <value name="ARG0">
                   <block type="lists_select_item">
-                    <value name="LIST"><block type="lexical_variable_get"><field name="VAR">q_pair</field></block></value>
+                    <value name="LIST"><block type="lexical_variable_get"><field name="VAR">global current_q_pair</field></block></value>
                     <value name="NUM"><block type="math_number"><field name="NUM">1</field></block></value>
                   </block>
                 </value>
@@ -207,7 +348,7 @@ xml_content += """
               </block>
             </next>
           </block>
-        </statement>
+        </next>
       </block>
     </statement>
   </block>
@@ -318,7 +459,7 @@ for combo in win_combos:
                 </value>
                 <statement name="DO0">
                   <block type="component_method">
-                    <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
                     <field name="COMPONENT_SELECTOR">Notifier1</field>
                     <value name="ARG0">
                       <block type="text_join">
@@ -333,6 +474,8 @@ for combo in win_combos:
                         </value>
                       </block>
                     </value>
+                    <value name="ARG1"><block type="text"><field name="TEXT">Game Over!</field></block></value>
+                    <value name="ARG2"><block type="text"><field name="TEXT">OK</field></block></value>
                     <next>
                       <block type="procedures_callnoreturn">
                         <mutation name="ResetGame"></mutation>
@@ -347,8 +490,59 @@ for combo in win_combos:
         <next>
 """
 
-xml_content += "  " + "</next></block>" * 8
+# Tie checking logic (added as the final "next" in the CheckWin chain)
+xml_content += """
+          <!-- Tie Logic -->
+          <block type="controls_if">
+            <value name="IF0">
+              <block type="logic_boolean"><field name="BOOL">TRUE</field></block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if">
+"""
 
+tie_condition = ""
+for i in range(1, 10):
+    tie_condition += f"""
+                <value name="A">
+                  <block type="logic_compare">
+                    <field name="OP">NEQ</field>
+                    <value name="A"><block type="component_set_get"><mutation component_type="Button" set_or_get="get" property_name="Text" is_generic="false" instance_name="Btn{i}"></mutation><field name="COMPONENT_SELECTOR">Btn{i}</field><field name="PROP">Text</field></block></value>
+                    <value name="B"><block type="text"><field name="TEXT">_</field></block></value>
+                  </block>
+                </value>
+"""
+    if i < 9:
+        tie_condition += '<value name="B"><block type="logic_operation"><field name="OP">AND</field>'
+
+tie_condition += "</block></value>" * 8 # Close logic operations
+
+xml_content += f"""
+                <value name="IF0">
+                  <block type="logic_operation"><field name="OP">AND</field>
+                    {tie_condition}
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="component_method">
+                    <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
+                    <field name="COMPONENT_SELECTOR">Notifier1</field>
+                    <value name="ARG0"><block type="text"><field name="TEXT">It's a Tie!</field></block></value>
+                    <value name="ARG1"><block type="text"><field name="TEXT">Game Over</field></block></value>
+                    <value name="ARG2"><block type="text"><field name="TEXT">OK</field></block></value>
+                    <next>
+                      <block type="procedures_callnoreturn">
+                        <mutation name="ResetGame"></mutation>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+"""
+
+xml_content += "  " + "</next></block>" * 8
 xml_content += """
     </statement>
   </block>
@@ -398,18 +592,40 @@ xml_content += """
       <block type="controls_if">
         <mutation else="1"></mutation>
         <value name="IF0">
-          <block type="logic_compare">
-            <field name="OP">EQ</field>
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+            <!-- Check that response is NOT EMPTY -->
             <value name="A">
-              <block type="text_changeCase">
-                <field name="OP">DOWNCASE</field>
-                <value name="STRING"><block type="lexical_variable_get"><mutation><eventparam name="response"></eventparam></mutation><field name="VAR">response</field></block></value>
+              <block type="logic_compare">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="text_trim">
+                    <value name="TEXT"><block type="lexical_variable_get"><mutation><eventparam name="response"></eventparam></mutation><field name="VAR">response</field></block></value>
+                  </block>
+                </value>
+                <value name="B"><block type="text"><field name="TEXT"></field></block></value>
               </block>
             </value>
+            <!-- Check that response equals current_answer -->
             <value name="B">
-              <block type="text_changeCase">
-                <field name="OP">DOWNCASE</field>
-                <value name="STRING"><block type="lexical_variable_get"><field name="VAR">global current_answer</field></block></value>
+              <block type="logic_compare">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="text_changeCase">
+                    <field name="OP">DOWNCASE</field>
+                    <value name="STRING">
+                      <block type="text_trim">
+                        <value name="TEXT"><block type="lexical_variable_get"><mutation><eventparam name="response"></eventparam></mutation><field name="VAR">response</field></block></value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="text_changeCase">
+                    <field name="OP">DOWNCASE</field>
+                    <value name="STRING"><block type="lexical_variable_get"><field name="VAR">global current_answer</field></block></value>
+                  </block>
+                </value>
               </block>
             </value>
           </block>
@@ -445,17 +661,13 @@ xml_content += """
           </block>
         </statement>
         <statement name="ELSE">
-          <!-- INCORRECT -->
+          <!-- INCORRECT - Using ShowMessageDialog to force user to acknowledge -->
           <block type="component_method">
-            <mutation component_type="Notifier" method_name="ShowAlert" is_generic="false" instance_name="Notifier1"></mutation>
+            <mutation component_type="Notifier" method_name="ShowMessageDialog" is_generic="false" instance_name="Notifier1"></mutation>
             <field name="COMPONENT_SELECTOR">Notifier1</field>
-            <value name="ARG0">
-              <block type="text_join">
-                <mutation items="2"></mutation>
-                <value name="ADD0"><block type="text"><field name="TEXT">Incorrect! Turn passed to the opponent.</field></block></value>
-                <value name="ADD1"><block type="text"><field name="TEXT"></field></block></value>
-              </block>
-            </value>
+            <value name="ARG0"><block type="text"><field name="TEXT">Incorrect! Turn passed to the opponent.</field></block></value>
+            <value name="ARG1"><block type="text"><field name="TEXT">Oops!</field></block></value>
+            <value name="ARG2"><block type="text"><field name="TEXT">OK</field></block></value>
           </block>
         </statement>
         <next>
@@ -530,7 +742,7 @@ def add_ids(match):
 # Apply regex over xml_content
 xml_content = re.sub(r'<block\b[^>]*>', add_ids, xml_content)
 
-# Target the proper Screen1.bky file, NOT generate_bky.py itself
+# Target the proper Screen1.bky file
 output_path = r"c:\Users\Justin\Downloads\LegitNaTo\Extracted\src\appinventor\ai_gordonlu0749\test\Screen1.bky"
 
 with open(output_path, "w", encoding="utf-8") as f:
