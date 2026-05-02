@@ -29,39 +29,75 @@ xml_content = """<xml xmlns="http://www.w3.org/1999/xhtml">
 categories = {
     "q_geo_easy": [
         ("Capital of France?", "paris"),
-        ("Capital of Japan?", "tokyo")
+        ("Capital of Japan?", "tokyo"),
+        ("What continent is Brazil in?", "south america"),
+        ("How many oceans are there?", "5"),
+        ("Which country has the most people?", "india"),
+        ("What is the largest continent?", "asia")
     ],
     "q_geo_med": [
         ("Capital of Australia?", "canberra"),
-        ("Capital of Canada?", "ottawa")
+        ("Capital of Canada?", "ottawa"),
+        ("Which river flows through Egypt?", "nile"),
+        ("What is the smallest country in the world?", "vatican city"),
+        ("Mount Everest is in which mountain range?", "himalayas"),
+        ("What country is shaped like a boot?", "italy")
     ],
     "q_geo_hard": [
         ("Capital of Burkina Faso?", "ouagadougou"),
-        ("Capital of Madagascar?", "antananarivo")
+        ("Capital of Madagascar?", "antananarivo"),
+        ("Which African country was formerly known as Abyssinia?", "ethiopia"),
+        ("What is the deepest trench in the ocean?", "mariana trench"),
+        ("Which country borders 14 nations and crosses 11 time zones?", "russia"),
+        ("What is the capital of Mongolia?", "ulaanbaatar")
     ],
     "q_math_easy": [
         ("What is 5 + 7?", "12"),
-        ("What is 20 - 6?", "14")
+        ("What is 20 - 6?", "14"),
+        ("What is 3 x 4?", "12"),
+        ("What is 10 / 2?", "5"),
+        ("How many sides does a hexagon have?", "6"),
+        ("What is 15 - 8?", "7")
     ],
     "q_math_med": [
         ("What is 12 * 12?", "144"),
-        ("What is 56 / 8?", "7")
+        ("What is 56 / 8?", "7"),
+        ("What is the square root of 81?", "9"),
+        ("What is 15% of 100?", "15"),
+        ("If x = 3, what is 2x + 4?", "10"),
+        ("How many degrees in a right angle?", "90")
     ],
     "q_math_hard": [
         ("Square root of 225?", "15"),
-        ("2 to the power of 8?", "256")
+        ("2 to the power of 8?", "256"),
+        ("What is the value of Pi to two decimal places?", "3.14"),
+        ("What is the derivative of x squared?", "2x"),
+        ("If a triangle has sides 3 and 4, what is the hypotenuse?", "5"),
+        ("What is the logarithm of 100 to base 10?", "2")
     ],
     "q_trivia_easy": [
         ("Color of a school bus?", "yellow"),
-        ("How many legs does a spider have?", "8")
+        ("How many legs does a spider have?", "8"),
+        ("What sound does a cow make?", "moo"),
+        ("What is the opposite of cold?", "hot"),
+        ("How many days are in a week?", "7"),
+        ("What color are apples usually?", "red")
     ],
     "q_trivia_med": [
         ("How many continents are there?", "7"),
-        ("Who wrote Romeo and Juliet?", "shakespeare")
+        ("Who wrote Romeo and Juliet?", "shakespeare"),
+        ("What planet is known as the Red Planet?", "mars"),
+        ("What do bees produce?", "honey"),
+        ("How many colors are in a rainbow?", "7"),
+        ("What is the main ingredient in guacamole?", "avocado")
     ],
     "q_trivia_hard": [
         ("A network security system? (Hint: firewall)", "firewall"),
-        ("What element is 'Fe' on the periodic table?", "iron")
+        ("What element is 'Fe' on the periodic table?", "iron"),
+        ("Who painted the Mona Lisa?", "da vinci"),
+        ("What is the hardest natural substance on Earth?", "diamond"),
+        ("What is the speed of light in vacuum? (in km/s, approx)", "300000"),
+        ("Who invented the telephone?", "bell")
     ]
 }
 
