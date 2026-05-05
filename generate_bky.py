@@ -649,7 +649,7 @@ xml_content += """
                 <value name="A">
                   <block type="text_changeCase">
                     <field name="OP">DOWNCASE</field>
-                    <value name="STRING">
+                    <value name="TEXT">
                       <block type="text_trim">
                         <value name="TEXT"><block type="lexical_variable_get"><mutation><eventparam name="response"></eventparam></mutation><field name="VAR">response</field></block></value>
                       </block>
@@ -659,7 +659,7 @@ xml_content += """
                 <value name="B">
                   <block type="text_changeCase">
                     <field name="OP">DOWNCASE</field>
-                    <value name="STRING"><block type="lexical_variable_get"><field name="VAR">global current_answer</field></block></value>
+                    <value name="TEXT"><block type="lexical_variable_get"><field name="VAR">global current_answer</field></block></value>
                   </block>
                 </value>
               </block>
