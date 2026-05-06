@@ -1,0 +1,36 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="component_event" id="4cf9a73650c843b698e34288a04610b1" x="50" y="50">
+    <mutation component_type="Button" is_generic="false" instance_name="btnGreet" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnGreet</field>
+    <statement name="DO">
+      <block type="component_set_get" id="28c337102c3b4943987f06aefe8b526a">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lblOutput"></mutation>
+        <field name="COMPONENT_SELECTOR">lblOutput</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="text_join" id="d361d0c571504b0998936ee52ba3a285">
+            <mutation items="3"></mutation>
+            <value name="ADD0">
+              <block type="text" id="925ea3fa83c942879a2f895562a88563">
+                <field name="TEXT">Hello, </field>
+              </block>
+            </value>
+            <value name="ADD1">
+              <block type="component_set_get" id="8ef3484b825447b6b7fab23e0e59cdd5">
+                <mutation component_type="TextBox" set_or_get="get" property_name="Text" is_generic="false" instance_name="txtName"></mutation>
+                <field name="COMPONENT_SELECTOR">txtName</field>
+                <field name="PROP">Text</field>
+              </block>
+            </value>
+            <value name="ADD2">
+              <block type="text" id="a3b707bee8e446038c9db04acbc45ced">
+                <field name="TEXT">! Welcome to Android Development!</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="233" language-version="34"></yacodeblocks>
+</xml>
