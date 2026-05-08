@@ -1,0 +1,71 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+
+  <block type="component_event" id="ac4b266972564d9eae94f583180f502e" x="50" y="50">
+    <mutation component_type="Button" is_generic="false" instance_name="btnAndroidStudio" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnAndroidStudio</field>
+    <statement name="DO">
+      <block type="component_set_get" id="7d42788cfca44be9b0eab95c4f0c3b9b">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lblDescription"></mutation>
+        <field name="COMPONENT_SELECTOR">lblDescription</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="text" id="24ef509227a940a9a9aa056012586383">
+            <field name="TEXT">Android Studio - Official IDE for Android</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="70113606634c492abafebbe8bfcba81d" x="50" y="200">
+    <mutation component_type="Button" is_generic="false" instance_name="btnXamarin" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnXamarin</field>
+    <statement name="DO">
+      <block type="component_set_get" id="6f0a202dcac34bb39680704363f41637">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lblDescription"></mutation>
+        <field name="COMPONENT_SELECTOR">lblDescription</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="text" id="f8f5f938f29c47fba846a1ba9b6e46f8">
+            <field name="TEXT">Xamarin - Cross-platform tool using C#</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="dee24f3978cb4c5ebd95b7cb4ccdb8b7" x="50" y="350">
+    <mutation component_type="Button" is_generic="false" instance_name="btnIonic" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnIonic</field>
+    <statement name="DO">
+      <block type="component_set_get" id="c95165e33b2242578ddae618d5d1bdfe">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lblDescription"></mutation>
+        <field name="COMPONENT_SELECTOR">lblDescription</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="text" id="dd3bbd240eb345a997b350eb753ddbf7">
+            <field name="TEXT">Ionic - Hybrid framework using HTML, CSS, JS</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+
+  <block type="component_event" id="2c21117cb3624c11867610b84b3f7116" x="50" y="500">
+    <mutation component_type="Button" is_generic="false" instance_name="btnFirebase" event_name="Click"></mutation>
+    <field name="COMPONENT_SELECTOR">btnFirebase</field>
+    <statement name="DO">
+      <block type="component_set_get" id="58fcda6516b740b59e1c85228271315f">
+        <mutation component_type="Label" set_or_get="set" property_name="Text" is_generic="false" instance_name="lblDescription"></mutation>
+        <field name="COMPONENT_SELECTOR">lblDescription</field>
+        <field name="PROP">Text</field>
+        <value name="VALUE">
+          <block type="text" id="e9d576c3f0ab4e1ca43525aa3bfc5982">
+            <field name="TEXT">Firebase - Backend service with real-time database</field>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+  <yacodeblocks ya-version="233" language-version="34"></yacodeblocks>
+</xml>
